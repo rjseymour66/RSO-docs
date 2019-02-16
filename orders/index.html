@@ -1,0 +1,1927 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation Site for the Record Stack Overflow API">
+      
+      
+      
+        <meta name="author" content="Ryan Seymour">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/baseline_music_note_black_18dp.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+    
+    
+      
+        <title>Orders - Record Stack Overflow</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#the-order-object" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Record Stack Overflow" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">library_music</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Record Stack Overflow
+              </span>
+              <span class="md-header-nav__topic">
+                Orders
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Record Stack Overflow" class="md-nav__button md-logo">
+      
+        <i class="md-icon">library_music</i>
+      
+    </a>
+    Record Stack Overflow
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/customer-account/" title="Create a customer account" class="md-nav__link">
+      Create a customer account
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/merchant-account/" title="Create a merchant account" class="md-nav__link">
+      Create a merchant account
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/sending-first-request/" title="Sending your first request" class="md-nav__link">
+      Sending your first request
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../response-codes/" title="Response Codes" class="md-nav__link">
+      Response Codes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../rate-limiting/" title="Rate Limiting" class="md-nav__link">
+      Rate Limiting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../records/" title="Records" class="md-nav__link">
+      Records
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Orders
+      </label>
+    
+    <a href="./" title="Orders" class="md-nav__link md-nav__link--active">
+      Orders
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-order-object" title="The Order object" class="md-nav__link">
+    The Order object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-order" title="Create an order" class="md-nav__link">
+    Create an order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-one-order" title="Retrieve one order" class="md-nav__link">
+    Retrieve one order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_1" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-error-response" title="Sample error response" class="md-nav__link">
+    Sample error response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-all-orders-by-customer" title="Retrieve all orders by customer" class="md-nav__link">
+    Retrieve all orders by customer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_2" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-all-orders-for-a-merchant" title="Retrieve all orders for a merchant" class="md-nav__link">
+    Retrieve all orders for a merchant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_3" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_3" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order-by-id" title="Get order by id" class="md-nav__link">
+    Get order by id
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_4" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_4" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-an-order-by-id" title="Update an order by id" class="md-nav__link">
+    Update an order by id
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_5" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_5" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_4" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-an-order" title="Delete an order" class="md-nav__link">
+    Delete an order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_6" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request_6" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../merchants/" title="Merchants" class="md-nav__link">
+      Merchants
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../customers/" title="Customers" class="md-nav__link">
+      Customers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quick-reference/" title="Quick Reference Library" class="md-nav__link">
+      Quick Reference Library
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api-glossary/" title="API Glossary" class="md-nav__link">
+      API Glossary
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api-best-practices/" title="API Best Practices" class="md-nav__link">
+      API Best Practices
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-order-object" title="The Order object" class="md-nav__link">
+    The Order object
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-order" title="Create an order" class="md-nav__link">
+    Create an order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-one-order" title="Retrieve one order" class="md-nav__link">
+    Retrieve one order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_1" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_1" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-error-response" title="Sample error response" class="md-nav__link">
+    Sample error response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-all-orders-by-customer" title="Retrieve all orders by customer" class="md-nav__link">
+    Retrieve all orders by customer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_2" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_2" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-all-orders-for-a-merchant" title="Retrieve all orders for a merchant" class="md-nav__link">
+    Retrieve all orders for a merchant
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_3" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_3" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order-by-id" title="Get order by id" class="md-nav__link">
+    Get order by id
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_4" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_4" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-an-order-by-id" title="Update an order by id" class="md-nav__link">
+    Update an order by id
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_5" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-request_5" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-response_4" title="Sample response" class="md-nav__link">
+    Sample response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-an-order" title="Delete an order" class="md-nav__link">
+    Delete an order
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_6" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-request_6" title="Sample request" class="md-nav__link">
+    Sample request
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Orders</h1>
+                
+                <h2 id="the-order-object">The Order object<a class="headerlink" href="#the-order-object" title="Permanent link">&para;</a></h2>
+<p>Orders objects are representations of the orders created from records objects. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or merchant ID.</p>
+<p><strong>Orders endpoints</strong></p>
+<p><strong>Orders object example</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;In progress&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;orderID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;record_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;recordID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;merchant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;merchantID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;customer_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;shipping_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;shipping_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Shipping Lane&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;billing_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;paypal_email&quot;</span><span class="p">:</span> <span class="s2">&quot;paypal@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Billing Drive&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Ste. #100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;This is a comment&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;_createdBy&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12T02:16:49.482Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;__v&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th align="left">Attributes</th>
+<th align="left"></th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left"></td>
+<td align="left">Describes where the order is in the delivery process. Possible values are "In progress", "Delivered", or "Cancelled".</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">_id</td>
+<td align="left"></td>
+<td align="left">System-generated unique order ID</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">product_info</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">record_id</td>
+<td align="left">Record ID for the record object that was turned into an order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">customer_info</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">username</td>
+<td align="left">Registered username of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">email</td>
+<td align="left">Registered email address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">firstName</td>
+<td align="left">Registered firstName of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">lastName</td>
+<td align="left">Registered lastName of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">shipping_info</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">shipping_address1</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">shipping_address2</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">shipping_city</td>
+<td align="left">Registered shipping city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">shipping_state</td>
+<td align="left">Registered shipping state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">shipping_zip</td>
+<td align="left">Registered shipping zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">billing_info</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">paypal_email</td>
+<td align="left">Registered PayPal email address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">billing_address1</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">billing_address2</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">billing_city</td>
+<td align="left">Registered billing city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">billing_state</td>
+<td align="left">Registered billing state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">billing_zip</td>
+<td align="left">Registered billing zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">merchant_info</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">merchant_id</td>
+<td align="left">Merchant ID of the merchant account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">companyName</td>
+<td align="left">Registered company name of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">primaryContact</td>
+<td align="left">Registered primary contact of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">phoneNumber</td>
+<td align="left">Registered phone number of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td align="left"></td>
+<td align="left">Additional notes about the order</td>
+<td align="left">Array of Strings</td>
+</tr>
+<tr>
+<td align="left">_createdBy</td>
+<td align="left"></td>
+<td align="left">System-generated ID of the customer that created the record object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">created_date</td>
+<td align="left"></td>
+<td align="left">Date order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD</td>
+<td align="left">Date</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="create-an-order">Create an order<a class="headerlink" href="#create-an-order" title="Permanent link">&para;</a></h2>
+<p>Creates a new order object. Customer accounts only.</p>
+<p><code>POST api/v1/orders/records/{recordId}/</code></p>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<p><strong>Path parameter</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{recordId}</td>
+<td align="left">Required</td>
+<td align="left">Record ID of the record object you want to create an order for</td>
+<td align="left">String</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th></th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">shipping_info</td>
+<td></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_address1</td>
+<td align="left">Required</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_address2</td>
+<td align="left">Required</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_city</td>
+<td align="left">Required</td>
+<td align="left">Registered shipping city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_state</td>
+<td align="left">Required</td>
+<td align="left">Registered shipping state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_zip</td>
+<td align="left">Required</td>
+<td align="left">Registered shipping zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">billing_info</td>
+<td></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>paypal_email</td>
+<td align="left">Required</td>
+<td align="left">Registered PayPal email address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_address1</td>
+<td align="left">Required</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_address2</td>
+<td align="left">Required</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_city</td>
+<td align="left">Required</td>
+<td align="left">Registered billing city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_state</td>
+<td align="left">Required</td>
+<td align="left">Registered billing state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_zip</td>
+<td align="left">Required</td>
+<td align="left">Registered billing zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">merchant_info</td>
+<td></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>merchant_id</td>
+<td align="left">Required</td>
+<td align="left">Merchant ID of the merchant account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>companyName</td>
+<td align="left">Required</td>
+<td align="left">Registered company name of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>primaryContact</td>
+<td align="left">Required</td>
+<td align="left">Registered primary contact of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>phoneNumber</td>
+<td align="left">Required</td>
+<td align="left">Registered phone number of the account that created the record object</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td></td>
+<td align="left">Optional</td>
+<td align="left">Additional notes about the order</td>
+<td align="left">Array of Strings</td>
+</tr>
+<tr>
+<td align="left">_createdBy</td>
+<td></td>
+<td align="left">System-generated</td>
+<td align="left">ID of the customer that created the record object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">created_date</td>
+<td></td>
+<td align="left">System-generated</td>
+<td align="left">Date order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD</td>
+<td align="left">Date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request">Sample request<a class="headerlink" href="#sample-request" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X POST http://www.recordstackoverflow.com/api/v1/orders/records/{recordId} -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/x-www-form-urlencoded&#39; -H &#39;Postman-Token: 0bfe6afe-0890-4b55-9b58-6c3de42b9be7&#39; -H &#39;cache-control: no-cache&#39; -d &#39;merchant_id=5c57980f47a2107aab422247&amp;merchant_id=&amp;companyName=Company%20Test&amp;primaryContact=John%20Doe&amp;phoneNumber=555-555-5555&amp;shipping_address1=123%20Shipping%20Lane&amp;shipping_address2=&amp;shipping_city=Raleigh&amp;shipping_state=NC&amp;shipping_zip=27615&amp;paypal_email=paypal%40example.com&amp;billing_address1=123%20Billing%20Drive&amp;billing_address2=Ste.%20%23100&amp;billing_city=Raleigh&amp;billing_state=NC&amp;billing_zip=27615&amp;comments=This%20is%20a%20comment&amp;undefined=&#39;
+</pre></div>
+
+
+<h3 id="sample-response">Sample response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h3>
+<p>Returns an order object if request was successful.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;In progress&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;orderID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;record_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;recordID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;merchant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;merchantID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;customer_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;shipping_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;shipping_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Shipping Lane&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;billing_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;paypal_email&quot;</span><span class="p">:</span> <span class="s2">&quot;paypal@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Billing Drive&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Ste. #100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;This is a comment&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;_createdBy&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12T02:16:49.482Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;__v&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h2 id="retrieve-one-order">Retrieve one order<a class="headerlink" href="#retrieve-one-order" title="Permanent link">&para;</a></h2>
+<p>Gets order information for the specified order ID. </p>
+<p><code>GET /api/v1/orders/{orderID}</code></p>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<p><strong>Path parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{orderID}</td>
+<td align="left">Required</td>
+<td align="left">Order ID of the order you want to retrieve information for</td>
+<td align="left">String</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request_1">Sample request<a class="headerlink" href="#sample-request_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X GET http://www.recordstackoverflow.com/api/v1/orders/{orderID} -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39;
+</pre></div>
+
+
+<h3 id="sample-response_1">Sample response<a class="headerlink" href="#sample-response_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;In progress&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;orderID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;record_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;recordID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;merchant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;merchantID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;customer_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;shipping_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;shipping_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Shipping Lane&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;billing_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;paypal_email&quot;</span><span class="p">:</span> <span class="s2">&quot;paypal@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Billing Drive&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Ste. #100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;This is a comment&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;_createdBy&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12T02:16:49.482Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;__v&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="sample-error-response">Sample error response<a class="headerlink" href="#sample-error-response" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error_message&quot;</span><span class="p">:</span> <span class="s2">&quot;Order not found&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;response_code&quot;</span><span class="p">:</span> <span class="mi">404</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h2 id="retrieve-all-orders-by-customer">Retrieve all orders by customer<a class="headerlink" href="#retrieve-all-orders-by-customer" title="Permanent link">&para;</a></h2>
+<p>Gets all order information for a specific customer ID. Customers can only request order information associated with their customer ID.</p>
+<p><code>GET /api/v1/orders/customer/{customerId}/</code></p>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<p><strong>Path parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{customerId}</td>
+<td align="left">Required</td>
+<td align="left">Customer ID of the customer you want to retrieve all orders for</td>
+<td align="left">String</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Query string parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="left">Optional</td>
+<td align="left">Number of order objects to return</td>
+<td align="left">Integer</td>
+</tr>
+<tr>
+<td align="left">sort</td>
+<td align="left">Optional</td>
+<td align="left">Sorts results by the date the order was created. Enter "asc" or "1" for an ascending sort. Enter "desc" and "-1" for a descending sort.</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">offset</td>
+<td align="left">Optional</td>
+<td align="left">The index to start with. The default is 0.</td>
+<td align="left">integer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request_2">Sample request<a class="headerlink" href="#sample-request_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X GET
+  &#39;http://lwww.recordstackoverflow.com/api/v1/orders/customers/{customerID}?limit=5&amp;sort=asc&#39; \
+  -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39;
+</pre></div>
+
+
+<h3 id="sample-response_2">Sample response<a class="headerlink" href="#sample-response_2" title="Permanent link">&para;</a></h3>
+<p>Returns a list of order objects.</p>
+<hr />
+<h2 id="retrieve-all-orders-for-a-merchant">Retrieve all orders for a merchant<a class="headerlink" href="#retrieve-all-orders-for-a-merchant" title="Permanent link">&para;</a></h2>
+<p>Retrieves all customer orders using the specified customer id. Merchants can only request order information associated with their merchant ID.</p>
+<p><code>GET /api/v1/orders/customers/{merchantID}/</code></p>
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<p><strong>Path parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">URL Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{merchantId}</td>
+<td align="left">Refers to the merchant ID of the merchant that created the records you want to retrieve.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Query string parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">limit</td>
+<td align="left">Optional</td>
+<td align="left">Number of record objects to return</td>
+<td align="left">Integer</td>
+</tr>
+<tr>
+<td align="left">sort</td>
+<td align="left">Optional</td>
+<td align="left">Sorts results alphabetically by artist name. "asc" and "1" sort alphabetically. "desc" and "-1" sort reverse-alphabetically.</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">offset</td>
+<td align="left">Optional</td>
+<td align="left">The index to start with. The default is 0.</td>
+<td align="left">integer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request_3">Sample request<a class="headerlink" href="#sample-request_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X GET &#39;http://www.recordstackoverflow.com/api/v1/orders/customers/&lt;merchantId&gt;?limit=3&amp;offset=10&#39; 
+  -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39;
+</pre></div>
+
+
+<h3 id="sample-response_3">Sample response<a class="headerlink" href="#sample-response_3" title="Permanent link">&para;</a></h3>
+<p>Returns a list of order objects for the specified merchant.</p>
+<hr />
+<h2 id="get-order-by-id">Get order by id<a class="headerlink" href="#get-order-by-id" title="Permanent link">&para;</a></h2>
+<p>Retrieves an order by id.</p>
+<p><code>GET /api/v1/orders/{orderId}/</code></p>
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<p><strong>Query string parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{orderId}</td>
+<td align="left">Refers to the order ID that you want to retrieve.</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request_4">Sample request<a class="headerlink" href="#sample-request_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X GET http://www.recordstackoverflow.com/api/v1/orders/{orderId} -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39; \
+</pre></div>
+
+
+<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
+<p>Returns a list of record objects</p>
+<hr />
+<h2 id="update-an-order-by-id">Update an order by id<a class="headerlink" href="#update-an-order-by-id" title="Permanent link">&para;</a></h2>
+<p>Merchant accounts only. Retrieves an order by id and updates the orders object using the body parameters.</p>
+<p><code>GET /api/v1/orders/{orderId}/</code></p>
+<h3 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
+<p><strong>Query string parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{orderId}</td>
+<td align="left">Refers to the order ID that you want to retrieve.</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th></th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">shipping_info</td>
+<td></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_address1</td>
+<td align="left">Optional</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_address2</td>
+<td align="left">Optional</td>
+<td align="left">Registered shipping address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_city</td>
+<td align="left">Optional</td>
+<td align="left">Registered shipping city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_state</td>
+<td align="left">Optional</td>
+<td align="left">Registered shipping state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>shipping_zip</td>
+<td align="left">Optional</td>
+<td align="left">Registered shipping zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">billing_info</td>
+<td></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>paypal_email</td>
+<td align="left">Optional</td>
+<td align="left">Registered PayPal email address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_address1</td>
+<td align="left">Optional</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_address2</td>
+<td align="left">Optional</td>
+<td align="left">Registered billing address of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_city</td>
+<td align="left">Optional</td>
+<td align="left">Registered billing city of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_state</td>
+<td align="left">Optional</td>
+<td align="left">Registered billing state of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>billing_zip</td>
+<td align="left">Optional</td>
+<td align="left">Registered billing zip code of the account that created the order</td>
+<td align="left">String</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td></td>
+<td align="left">Optional</td>
+<td align="left">Additional notes about the order</td>
+<td align="left">Array of Strings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request_5">Sample request<a class="headerlink" href="#sample-request_5" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -X PUT http://www.recordstackoverflow.com/api/v1/orders/{orderId} -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39; -d &#39;price=15&amp;comments=Price%20drop%20with%20coupon&#39;
+</pre></div>
+
+
+<h3 id="sample-response_4">Sample response<a class="headerlink" href="#sample-response_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;In progress&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5c622fab2d312f70807cbc6f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;record_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5c620710c258e86bbcab95e9&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;merchant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;5c620580c258e86bbcab95e6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;customer_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;shipping_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;shipping_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Shipping Lane&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;shipping_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;billing_info&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;paypal_email&quot;</span><span class="p">:</span> <span class="s2">&quot;paypal@example.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address1&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Billing Drive&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_address2&quot;</span><span class="p">:</span> <span class="s2">&quot;Ste. #100&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_city&quot;</span><span class="p">:</span> <span class="s2">&quot;Raleigh&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_state&quot;</span><span class="p">:</span> <span class="s2">&quot;NC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;billing_zip&quot;</span><span class="p">:</span> <span class="s2">&quot;27615&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Price drop with coupon&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;_createdBy&quot;</span><span class="p">:</span> <span class="s2">&quot;5c62045537ca8a6ba560ee80&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-12T02:30:03.964Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;__v&quot;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<hr />
+<h2 id="delete-an-order">Delete an order<a class="headerlink" href="#delete-an-order" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Delete orders only when the order <code>status</code> is <code>In progress</code>.</p>
+</div>
+<p><code>DELETE /api/v1/orders/{orderId}/customer/{customerId}</code></p>
+<h3 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
+<p><strong>Query string parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Required</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">{orderId}</td>
+<td align="left">Refers to the order ID that you want to delete.</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-request_6">Sample request<a class="headerlink" href="#sample-request_6" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>curl -X DELETE &#39;http://www.recordstackoverflow.com/api/v1/orders/{orderId}/customers/{customerId}&#39; -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; -H &#39;Content-Type: application/json&#39;
+</pre></div>
+
+
+<p><strong>Returns</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;Success&quot;</span><span class="p">:</span> <span class="s2">&quot;Order deleted&quot;</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../records/" title="Records" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Records
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../merchants/" title="Merchants" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Merchants
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Ryan Seymour
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a353778b.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
