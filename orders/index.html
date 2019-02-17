@@ -428,8 +428,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-an-order-by-id" title="Update an order by id" class="md-nav__link">
-    Update an order by id
+  <a href="#update-an-order-by-id" title="Update an order by ID" class="md-nav__link">
+    Update an order by ID
   </a>
   
     <nav class="md-nav">
@@ -694,8 +694,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-an-order-by-id" title="Update an order by id" class="md-nav__link">
-    Update an order by id
+  <a href="#update-an-order-by-id" title="Update an order by ID" class="md-nav__link">
+    Update an order by ID
   </a>
   
     <nav class="md-nav">
@@ -781,7 +781,7 @@
                   <h1>Orders</h1>
                 
                 <h2 id="the-order-object">The Order object<a class="headerlink" href="#the-order-object" title="Permanent link">&para;</a></h2>
-<p>Orders objects are representations of the orders created from records objects. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or by merchant ID.</p>
+<p>The order object is a representation of an order created from a record object. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or by merchant ID.</p>
 <p><strong>Orders endpoints</strong>  </p>
 <ul>
 <li>PUT <code>/orders/merchants/{merchantId}/records/{recordId}/</code></li>
@@ -868,6 +868,12 @@
 <td align="left">String</td>
 </tr>
 <tr>
+<td align="left"></td>
+<td align="left">merchant_id</td>
+<td align="left">The merchant ID of the merchant account that created the record object.</td>
+<td align="left">String</td>
+</tr>
+<tr>
 <td align="left">customer_info</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -906,31 +912,31 @@
 <tr>
 <td align="left"></td>
 <td align="left">shipping_address1</td>
-<td align="left">The registered shipping address of the customer account that created the order.</td>
+<td align="left">The street address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">shipping_address2</td>
-<td align="left">The registered shipping address of the customer account that created the order.</td>
+<td align="left">The street address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">shipping_city</td>
-<td align="left">The registered shipping city of the customer account that created the order.</td>
+<td align="left">The city of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">shipping_state</td>
-<td align="left">The registered shipping state of the customer account that created the order.</td>
+<td align="left">The state of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">shipping_zip</td>
-<td align="left">The registered shipping zip code of the customer account that created the order.</td>
+<td align="left">The zip code of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -942,67 +948,37 @@
 <tr>
 <td align="left"></td>
 <td align="left">paypal_email</td>
-<td align="left">The registered PayPal email address of the customer account that created the order.</td>
+<td align="left">The PayPal email address used to pay for orders.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">billing_address1</td>
-<td align="left">The registered billing address of the customer account that created the order.</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">billing_address2</td>
-<td align="left">The registered billing address of the customer account that created the order.</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">billing_city</td>
-<td align="left">The registered billing city of the customer account that created the order.</td>
+<td align="left">The city of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">billing_state</td>
-<td align="left">The registered billing state of the customer account that created the order.</td>
+<td align="left">The state of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left">billing_zip</td>
-<td align="left">The registered billing zip code of the customer account that created the order.</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left">merchant_info</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">merchant_id</td>
-<td align="left">The merchant ID of the merchant account that created the record object.</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">companyName</td>
-<td align="left">The registered company name of the merchant account that created the record object.</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">primaryContact</td>
-<td align="left">The registered primary contact of the merchant account that created the record object.</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">phoneNumber</td>
-<td align="left">The registered phone number of the merchant account that created the record object.</td>
+<td align="left">The zip code of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1073,35 +1049,35 @@
 <td align="left"></td>
 <td>shipping_address1</td>
 <td align="left">Required</td>
-<td align="left">The registered shipping address of the customer account creating the order.</td>
+<td align="left">The street address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_address2</td>
 <td align="left">Optional</td>
-<td align="left">The registered shipping address of the account creating the order</td>
+<td align="left">The street address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_city</td>
 <td align="left">Required</td>
-<td align="left">The registered shipping city of the account creating the order</td>
+<td align="left">The city of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
 <td align="left">Required</td>
-<td align="left">The registered shipping state of the account creating the order</td>
+<td align="left">The state of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
 <td align="left">Required</td>
-<td align="left">The registered shipping zip code of the account creating the order</td>
+<td align="left">The zip code of the address to ship the order to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1115,77 +1091,42 @@
 <td align="left"></td>
 <td>paypal_email</td>
 <td align="left">Required</td>
-<td align="left">The registered PayPal email address of the account creating the order</td>
+<td align="left">The PayPal email address used to pay for orders.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address1</td>
-<td align="left">Required</td>
-<td align="left">The registered billing address of the account creating the order</td>
+<td align="left">Optional</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address2</td>
 <td align="left">Optional</td>
-<td align="left">The registered billing address of the account creating the order</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_city</td>
-<td align="left">Required</td>
-<td align="left">The registered billing city of the account creating the order</td>
+<td align="left">Optional</td>
+<td align="left">The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_state</td>
-<td align="left">Required</td>
-<td align="left">The registered billing state of the account creating the order</td>
+<td align="left">Optional</td>
+<td align="left">The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_zip</td>
-<td align="left">Required</td>
-<td align="left">The registered billing zip code of the account creating the order</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left">merchant_info</td>
-<td></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"></td>
-<td>merchant_id</td>
-<td align="left">Required</td>
-<td align="left">The merchant ID of the merchant account that created the record object</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td>companyName</td>
-<td align="left">Required</td>
-<td align="left">The registered company name of the account that created the record object</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td>primaryContact</td>
-<td align="left">Required</td>
-<td align="left">The registered primary contact of the account that created the record object</td>
-<td align="left">String</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td>phoneNumber</td>
-<td align="left">Required</td>
-<td align="left">The registered phone number of the account that created the record object</td>
+<td align="left">Optional</td>
+<td align="left">The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1308,7 +1249,7 @@
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1453,7 +1394,7 @@
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1558,7 +1499,7 @@
 
 
 <hr />
-<h2 id="update-an-order-by-id">Update an order by id<a class="headerlink" href="#update-an-order-by-id" title="Permanent link">&para;</a></h2>
+<h2 id="update-an-order-by-id">Update an order by ID<a class="headerlink" href="#update-an-order-by-id" title="Permanent link">&para;</a></h2>
 <p><strong>(Merchant accounts only)</strong></p>
 <p>Retrieves an order by id and updates the orders object using the body parameters. Update only order objects that were created using your registered merchant ID.</p>
 <p>PUT <code>/orders/{orderId}/</code></p>

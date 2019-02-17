@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#quick-reference-guide" tabindex="1" class="md-skip">
+      <a href="#records" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -337,12 +337,58 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Quick Reference Library
+      </label>
     
     <a href="./" title="Quick Reference Library" class="md-nav__link md-nav__link--active">
       Quick Reference Library
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#records" title="Records" class="md-nav__link">
+    Records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orders" title="Orders" class="md-nav__link">
+    Orders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merchants" title="Merchants" class="md-nav__link">
+    Merchants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customers" title="Customers" class="md-nav__link">
+    Customers
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -385,8 +431,43 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#records" title="Records" class="md-nav__link">
+    Records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orders" title="Orders" class="md-nav__link">
+    Orders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merchants" title="Merchants" class="md-nav__link">
+    Merchants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customers" title="Customers" class="md-nav__link">
+    Customers
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -399,7 +480,40 @@
               
                 
                 
-                <h1 id="quick-reference-guide">Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">&para;</a></h1>
+                  <h1>Quick Reference Library</h1>
+                
+                <h2 id="records">Records<a class="headerlink" href="#records" title="Permanent link">&para;</a></h2>
+<p><a href="../records/"><code>/records/</code></a><br />
+Create a new record  </p>
+<p><a href="../records/"><code>/records/</code></a> <br />
+Retrieve all records  </p>
+<p><a href="../records/"><code>/records/merchant/{merchantId}/</code></a><br />
+Retrieve all records by merchant  </p>
+<p><a href="../records/"><code>/records/{recordId}/</code></a><br />
+Update a record  </p>
+<p><a href="../records/"><code>/records/{recordId}/merchants/{merchantId}/</code></a><br />
+Delete a record  </p>
+<h2 id="orders">Orders<a class="headerlink" href="#orders" title="Permanent link">&para;</a></h2>
+<p><a href="../orders/"><code>/orders/merchants/{merchantId}/records/{recordId}/</code></a><br />
+Create and order  </p>
+<p><a href="../orders/"><code>/orders/customers/{customerId}/</code></a><br />
+Retrieve all orders for a customer  </p>
+<p><a href="../orders/"><code>/orders/merchants/{merchantId}/</code></a><br />
+Retrieve all orders for a merchant  </p>
+<p><a href="../orders/"><code>/orders/{orderId}/</code></a><br />
+Update an order by ID  </p>
+<p><a href="../orders/"><code>/orders/{orderId}/customers/{customerId}/</code></a><br />
+Delete an order  </p>
+<h2 id="merchants">Merchants<a class="headerlink" href="#merchants" title="Permanent link">&para;</a></h2>
+<p><a href="../merchants/"><code>/merchants/{merchantId}/</code></a><br />
+Retrieve merchant information  </p>
+<p><a href="../merchants/"><code>/merchants/{merchantId}/</code></a><br />
+Update a merchant by ID  </p>
+<h2 id="customers">Customers<a class="headerlink" href="#customers" title="Permanent link">&para;</a></h2>
+<p><a href="../customers/"><code>/customers/{customerId}/</code></a><br />
+Retrieve customer information  </p>
+<p><a href="../customers/"><code>/customers/{customerId}/</code></a><br />
+Update a customer by ID  </p>
                 
                   
                 

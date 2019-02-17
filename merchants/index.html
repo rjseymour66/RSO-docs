@@ -603,7 +603,12 @@
                   <h1>Merchants</h1>
                 
                 <h2 id="the-merchant-object">The Merchant object<a class="headerlink" href="#the-merchant-object" title="Permanent link">&para;</a></h2>
-<p>Store a representation of your company data in a merchant object. Contains your organization name, primary contact name, email, phone number, and mailing address. Customers and merchants can retrieve merchant information. </p>
+<p>Store a representation of your company information in a merchant object. Contains your organization name, primary contact name, email, phone number, and mailing address. Customers and merchants can retrieve merchant information. </p>
+<p><strong>Merchants endpoints</strong>  </p>
+<ul>
+<li>GET <code>/merchants/{merchantId}/</code>  </li>
+<li>PUT <code>/merchants/{merchantId}/</code>  </li>
+</ul>
 <h3 id="merchant-object-example">Merchant object example<a class="headerlink" href="#merchant-object-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;merchantAccount&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -640,37 +645,37 @@
 <tr>
 <td align="left">merchantAccount</td>
 <td></td>
-<td align="left">Identifies the account as a merchant account</td>
+<td align="left">Identifies the account as a merchant account.</td>
 <td align="left">Boolean</td>
 </tr>
 <tr>
 <td align="left">_id</td>
 <td></td>
-<td align="left">Unique system-generated identifier for the record object.</td>
+<td align="left">Unique system-generated identifier of the record object.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">companyName</td>
 <td></td>
-<td align="left">Name of company that accepts customer payments</td>
+<td align="left">The name of the company that accepts customer payments.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">primaryContact</td>
 <td></td>
-<td align="left">Customer contact for questions regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The customer contact for questions regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">email</td>
 <td></td>
-<td align="left">Email address for customer questions regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The email address for customer questions regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">phoneNumber</td>
 <td></td>
-<td align="left">Phone number for <code>primaryContact</code> or automated system to answer customer calls regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The phone number for <code>primaryContact</code> or the automated system to answer customer calls regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -682,39 +687,39 @@
 <tr>
 <td align="left"></td>
 <td>shipping_address1</td>
-<td align="left">Street address that record products ship or that accepts returns</td>
+<td align="left">The street address that the merchant ships orders from and accepts returns from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_address2</td>
-<td align="left">Street address that merchant ships record products from</td>
+<td align="left">The street address that the merchant ships orders from and accepts returns from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_city</td>
-<td align="left">City that merchant ships record products from</td>
+<td align="left">The city of the street address that the merchant ships orders from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
-<td align="left">State that merchant ships record products from</td>
+<td align="left">The state of the street address that the merchant ships orders from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
-<td align="left">Zip code that merchant ships record products from</td>
+<td align="left">The zip code of the street address that the merchant ships orders from.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="retrieve-merchant-information">Retrieve merchant information<a class="headerlink" href="#retrieve-merchant-information" title="Permanent link">&para;</a></h2>
-<p><code>GET /api/v1/merchant/{merchantId}</code></p>
-<p>Gets the information for a specific merchant ID.</p>
+<p>GET <code>/merchant/{merchantId}/</code></p>
+<p>Retrieves the information for a specific merchant ID.</p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
@@ -739,7 +744,7 @@
 
 
 <h3 id="sample-response">Sample response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h3>
-<p>Returns merchant information that can be public.</p>
+<p>Returns the specified merchant information.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;companyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Company Name&quot;</span><span class="p">,</span>
     <span class="nt">&quot;primaryContact&quot;</span><span class="p">:</span> <span class="s2">&quot;Primary Contact&quot;</span><span class="p">,</span>
@@ -760,8 +765,9 @@
 
 <hr />
 <h2 id="update-merchant-by-id">Update merchant by ID<a class="headerlink" href="#update-merchant-by-id" title="Permanent link">&para;</a></h2>
-<p>Merchant accounts only. Retrieves a merchant by ID and updates the existing merchant object using the provided body parameters. You can only update merchant objects that were created using your registered merchant ID.</p>
-<p><code>PUT /api/v1/merchant/{merchantId}</code></p>
+<p><strong>(Merchant accounts only)</strong></p>
+<p>Retrieves a merchant by ID and updates the existing merchant object with the information provided in the body parameters. You can update only merchant objects associated with the request's access token.</p>
+<p>PUT <code>/merchant/{merchantId}/</code></p>
 <h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
@@ -794,55 +800,55 @@
 <tr>
 <td align="left">companyName</td>
 <td align="left">Optional</td>
-<td align="left">Name of company that accepts customer payments</td>
+<td align="left">The name of the company that accepts customer payments.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">primaryContact</td>
 <td align="left">Optional</td>
-<td align="left">Customer contact for questions regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The customer contact for questions regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">email</td>
 <td align="left">Optional</td>
-<td align="left">Email address for customer questions regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The email address for customer questions regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">phoneNumber</td>
 <td align="left">Optional</td>
-<td align="left">Phone number for <code>primaryContact</code> or automated system to answer customer calls regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The phone number for customer calls regarding inventory, order fulfillment, returns, etc.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">shipping_address1</td>
 <td align="left">Optional</td>
-<td align="left">Street address that record products ship or that accepts returns</td>
+<td align="left">The street address that the merchant ships record products from and accepts returns from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">shipping_address2</td>
 <td align="left">Optional</td>
-<td align="left">Street address that merchant ships record products from</td>
+<td align="left">The street address that the merchant ships record products from and accepts returns from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">shipping_city</td>
 <td align="left">Optional</td>
-<td align="left">City that merchant ships record products from</td>
+<td align="left">The city that the merchant ships record products from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">shipping_state</td>
 <td align="left">Optional</td>
-<td align="left">State that merchant ships record products from</td>
+<td align="left">The state that the merchant ships record products from.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">shipping_zip</td>
 <td align="left">Optional</td>
-<td align="left">Zip code that merchant ships record products from</td>
+<td align="left">The zip code that the merchant ships record products from.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
@@ -851,7 +857,7 @@
 <div class="codehilite"><pre><span></span>curl -X PUT \
   http://www.recordstackoverflow.com/api/v1/merchants/{merchantID} \
   -H &#39;Authorization: Bearer &lt;access-token&gt;&#39; \
-  -d &#39;primaryContact=Updated%20Contact&amp;undefined=&#39;
+  -d &#39;primaryContact=Updated%20Contact&#39;
 </pre></div>
 
 
@@ -860,8 +866,8 @@
     <span class="nt">&quot;merchantAccount&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;merchantID&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;companyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Company Name&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;primaryContact&quot;</span><span class="p">:</span> <span class="s2">&quot;Updated Contact&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;company@email.com&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;primaryContact&quot;</span><span class="p">:</span> <span class="s2">&quot;Updated Contact&quot;</span><span class="p">,</span>
+</span>    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;company@email.com&quot;</span><span class="p">,</span>
     <span class="nt">&quot;phoneNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;555-555-5555&quot;</span><span class="p">,</span>
     <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>

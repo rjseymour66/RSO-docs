@@ -391,13 +391,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sample-error-response" title="Sample error response" class="md-nav__link">
-    Sample error response
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -428,13 +421,6 @@
           <li class="md-nav__item">
   <a href="#sample-response_1" title="Sample response" class="md-nav__link">
     Sample response
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-error-response_1" title="Sample error response" class="md-nav__link">
-    Sample error response
   </a>
   
 </li>
@@ -558,13 +544,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sample-error-response" title="Sample error response" class="md-nav__link">
-    Sample error response
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -599,13 +578,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sample-error-response_1" title="Sample error response" class="md-nav__link">
-    Sample error response
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -631,7 +603,12 @@
                   <h1>Customers</h1>
                 
                 <h2 id="the-customer-object">The Customer object<a class="headerlink" href="#the-customer-object" title="Permanent link">&para;</a></h2>
-<p>Store a representation of your customer data in a customer object. Contains your name, email, shipping address, and billing information. Customers and merchants can retrieve customer information.</p>
+<p>Store a representation of your personal account information in a customer object. Contains your name, email, shipping address, and billing information. Customers and merchants can retrieve customer information.</p>
+<p><strong>Customers endpoints</strong> </p>
+<ul>
+<li>GET <code>/customers/{customerId}/</code></li>
+<li>PUT <code>/customers/{customerId}/</code></li>
+</ul>
 <h3 id="customer-object-example">Customer object example<a class="headerlink" href="#customer-object-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
@@ -682,25 +659,25 @@
 <tr>
 <td align="left">username</td>
 <td></td>
-<td align="left">Username used at Record Stack Overflow login.</td>
+<td align="left">The username of the customer account.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">firstName</td>
 <td></td>
-<td align="left">Customer first name used for billing purposes</td>
+<td align="left">The first name of the customer account.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">lastName</td>
 <td></td>
-<td align="left">Customer last name used for billing purposes</td>
+<td align="left">The last name of the customer account.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">email</td>
 <td></td>
-<td align="left">Email address for customer questions regarding inventory, order fulfillment, returns, etc.</td>
+<td align="left">The email address of the customer account.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -712,31 +689,31 @@
 <tr>
 <td align="left"></td>
 <td>shipping_address1</td>
-<td align="left">Street address that you want merchants to ship record products to</td>
+<td align="left">The street address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_address2</td>
-<td align="left">Street address that you want merchants to ship record products to</td>
+<td align="left">The street address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_city</td>
-<td align="left">City that you want merchants to ship record products to</td>
+<td align="left">The city of the address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
-<td align="left">State that you want merchants to ship record products to</td>
+<td align="left">The state of the address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
-<td align="left">Zip code you want merchants to ship record products to</td>
+<td align="left">The zip code of the address you your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -748,45 +725,45 @@
 <tr>
 <td align="left"></td>
 <td>paypal_email</td>
-<td align="left">PayPal email address used to pay for orders</td>
+<td align="left">The PayPal email address used to pay for orders.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address1</td>
-<td align="left">Address associated with PayPal account, if different from shipping address</td>
+<td align="left">The address associated with the PayPal account, if different from shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address2</td>
-<td align="left">Address associated with PayPal account, if different from shipping address</td>
+<td align="left">The address associated with the PayPal account, if different from shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_city</td>
-<td align="left">City associated with PayPal account, if different from shipping address</td>
+<td align="left">The city of the address associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_state</td>
-<td align="left">State associated with PayPal account, if different from shipping address</td>
+<td align="left">The state of the address associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_zip</td>
-<td align="left">Zip code associated with PayPal account, if different from shipping address</td>
+<td align="left">The zip code of the address associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="retrieve-customer-information">Retrieve customer information<a class="headerlink" href="#retrieve-customer-information" title="Permanent link">&para;</a></h2>
-<p>Gets the information for a specific customer ID. Customers information is only returned if the you information associated with the provided access token.</p>
-<p><code>GET /api/v1/customer/{customerId}</code></p>
+<p>Retrieves the information for a specific customer ID. You can update only customer objects associated with the request's access token.</p>
+<p>GET <code>/customer/{customerId}/</code></p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
@@ -802,7 +779,7 @@
 <tr>
 <td align="left">{customerId}</td>
 <td align="left">Required</td>
-<td align="left">Refers to the <code>_id</code> of the customer you want to retrieve information for</td>
+<td align="left">Refers to the customer ID of the customer that you want to retrieve information for.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
@@ -813,7 +790,7 @@
 
 
 <h3 id="sample-response">Sample response<a class="headerlink" href="#sample-response" title="Permanent link">&para;</a></h3>
-<p>Returns a customer object </p>
+<p>Returns a customer object.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
@@ -845,18 +822,10 @@
 </pre></div>
 
 
-<h3 id="sample-error-response">Sample error response<a class="headerlink" href="#sample-error-response" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;error_message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Customer not found. Check customer ID&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">404</span> 
-<span class="p">}</span>
-</pre></div>
-
-
 <hr />
 <h2 id="update-customer-by-id">Update customer by ID<a class="headerlink" href="#update-customer-by-id" title="Permanent link">&para;</a></h2>
 <p>Retrieves the customer account by the specified ID and updates the object with the information provided in the body parameters.</p>
-<p><code>PUT /api/v1/customers/{customerId}</code></p>
+<p>PUT <code>/customers/{customerId}/</code></p>
 <h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
@@ -872,7 +841,7 @@
 <tr>
 <td align="left">{customerId}</td>
 <td align="left">Required</td>
-<td align="left">Refers to the <code>_id</code> of the customer object you want to update</td>
+<td align="left">Refers to the customer ID of the customer that you want to retrieve information for.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
@@ -928,35 +897,35 @@
 <td align="left"></td>
 <td>shipping_address1</td>
 <td align="left">Optional</td>
-<td align="left">Street address that you want merchants to ship record products to</td>
+<td align="left">The street address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_address2</td>
 <td align="left">Optional</td>
-<td align="left">Street address that you want merchants to ship record products to</td>
+<td align="left">The street address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_city</td>
 <td align="left">Optional</td>
-<td align="left">City that you want merchants to ship record products to</td>
+<td align="left">The city of the address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
 <td align="left">Optional</td>
-<td align="left">State that you want merchants to ship record products to</td>
+<td align="left">The state of the address that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
 <td align="left">Optional</td>
-<td align="left">Zip code you want merchants to ship record products to</td>
+<td align="left">The zip code of the address you your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -970,42 +939,42 @@
 <td align="left"></td>
 <td>paypal_email</td>
 <td align="left">Optional</td>
-<td align="left">PayPal email address used to pay for orders</td>
+<td align="left">The PayPal email address used to pay for orders.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address1</td>
 <td align="left">Optional</td>
-<td align="left">Address associated with PayPal account, if different from shipping address</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_address2</td>
 <td align="left">Optional</td>
-<td align="left">Address associated with PayPal account, if different from shipping address</td>
+<td align="left">The address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_city</td>
 <td align="left">Optional</td>
-<td align="left">City associated with PayPal account, if different from shipping address</td>
+<td align="left">The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_state</td>
 <td align="left">Optional</td>
-<td align="left">State associated with PayPal account, if different from shipping address</td>
+<td align="left">The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_zip</td>
 <td align="left">Optional</td>
-<td align="left">Zip code associated with PayPal account, if different from shipping address</td>
+<td align="left">The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
@@ -1016,11 +985,11 @@
 
 
 <h3 id="sample-response_1">Sample response<a class="headerlink" href="#sample-response_1" title="Permanent link">&para;</a></h3>
-<p>Returns an updated customer object</p>
+<p>Returns an updated customer object.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;newUserName&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;newUserName&quot;</span><span class="p">,</span>
+</span>    <span class="nt">&quot;firstName&quot;</span><span class="p">:</span> <span class="s2">&quot;First&quot;</span><span class="p">,</span>
     <span class="nt">&quot;lastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span>
     <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@example.com&quot;</span><span class="p">,</span>
     <span class="nt">&quot;shipping_info&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1044,14 +1013,6 @@
     <span class="p">],</span>
     <span class="nt">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-06T02:56:26.213Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;__v&quot;</span><span class="p">:</span> <span class="mi">0</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h3 id="sample-error-response_1">Sample error response<a class="headerlink" href="#sample-error-response_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;error_message&quot;</span> <span class="p">:</span> <span class="s2">&quot;Customer not found. Check customer ID&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">404</span> 
 <span class="p">}</span>
 </pre></div>
                 
