@@ -20,6 +20,7 @@ The Record Stack Overflow API uses standard [HTTP status codes](https://en.wikip
 ```
 
 ### Sample error response
+
 ```json
 {
   "error_message": "Request failed",

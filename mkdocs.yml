@@ -24,7 +24,7 @@ nav:
 # - REST(ful) API: rest.md
 - Response Codes: response-codes.md
 - Rate Limiting: rate-limiting.md
-# - Code Samples: code-samples
+# - Code Samples: code-samples.md
 - Records: records.md
 - Orders: orders.md
 - Merchants: merchants.md

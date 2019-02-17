@@ -1,6 +1,6 @@
 ## The Record object
 
-Store representations of each record item you sell in `Record` objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or records added by a specified merchant. Records are physical goods.
+Store representations of each record item you sell in `Record` objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.
 
 **Records endpoints**
 
@@ -32,12 +32,12 @@ Store representations of each record item you sell in `Record` objects. Contains
 | Attributes | Description | Type | 
 | :----------| :-----------| :----| 
 | _id | Unique system-generated identifier for the record object. | String |
-| artist | Name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
-| title | Title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
-| price | Price to sell record in USD. | String |
-| condition | Measures the playability and overall quality of the physical record and packaging. | Array of Strings |
+| artist | The name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
+| title | The title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
+| price | The price to sell record in USD. | String |
+| condition | Describes the playability and overall quality of the physical record and packaging. | Array of Strings |
 | comments | Additional notes about the record. | Array of Strings |
-| created_date | Date record object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
+| created_date | The date the record object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
 
 ****
 
@@ -45,7 +45,7 @@ Store representations of each record item you sell in `Record` objects. Contains
 
 Creates a new record object.
 
-**POST `api/v1/records/`**
+POST `/records/`
 
 ### Parameters
 
@@ -53,10 +53,10 @@ Creates a new record object.
 
 | Parameter      | Required       | Description | Type |
 | :------------- | :------------- | :-----------| :----|
-| artist | Required | Name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
-| title | Required | Title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
-| price | Required | Price to sell record in USD. | String |
-| condition | Required | Measures the playability and overall quality of the physical record and packaging. | Array of Strings |
+| artist | Required | The name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
+| title | Required | The title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
+| price | Required | The price to sell record in USD. | String |
+| condition | Required | Describes the playability and overall quality of the physical record and packaging. | Array of Strings |
 | comments | Optional | Additional notes about the record. | Array of Strings |
 
 ### Sample request
@@ -92,9 +92,9 @@ Returns a record object.
 
 ## Retrieve all records
 
-`GET /api/v1/records`
+GET `/records/`
 
-Gets all records using the specified parameters.
+Retrieves all records. Filter results using the query parameters.
 
 ### Parameters
 
@@ -102,10 +102,10 @@ Gets all records using the specified parameters.
 
 | Parameter | Required    | Description | Type     |
 | :---------| :-----------| :-----------| :--------| 
-| artist    | Optional | Name of artist to return in search | String |
-| limit | Optional | Number of record objects to return | Integer |
-| sort | Optional | Sorts results alphabetically by artist name. "asc" or "1" sort alphabetically. "desc" or "-1" sort reverse-alphabetically. | String |
-| offset | Optional | The index to start with. The default is 0. | integer |
+| artist    | Optional | Name of artist to search for. | String |
+| limit | Optional | The number of record objects to return. Default is all. | Integer |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
+| offset | Optional | The index to start with. The default is 0. | Integer |
 
 
 ### Sample request
@@ -169,9 +169,9 @@ Returns an Array of record objects. If no record matches the query and no errors
 
 ## Retrieve all records by merchant
 
-`GET /api/v1/records/merchant/{merchantId}`
+GET `/records/merchant/{merchantId}/`
 
-Gets all records for sale for a specific merchant ID.
+Retrieves all records for sale for a specific merchant ID.
 
 ###Parameters
 
@@ -186,8 +186,8 @@ Gets all records for sale for a specific merchant ID.
 
 | Parameter | Required | Description | Type |
 | :---------| :-----------| :----| :--------|
-| limit | Optional | Number of record objects to return | Integer |
-| sort | Optional | Sorts results alphabetically by artist name. "asc" and "1" sort alphabetically. "desc" and "-1" sort reverse-alphabetically. | String |
+| limit | Optional | The number of record objects to return. Default is all. | Integer |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
 | offset | Optional | The index to start with. The default is 0. | integer |
 
 ### Sample request
@@ -238,13 +238,13 @@ Returns an Array of record objects created by the specified merchant ID. If no r
 ****
 
 ## Update a record
-(Merchant accounts only)
+**(Merchant accounts only)**
 
 `PUT /api/v1/records/{recordId}`
 
-Retrieves a record by ID and updates the existing record object using the provided body parameters. You can only update record objects that were created using your registered merchant ID.
+Retrieves a record by ID and updates the existing record object using the body parameters. Update only record objects that were created using your registered merchant ID.
 
-### Path Parameters
+### Parameters
 
 **Path parameters**
 
@@ -258,10 +258,10 @@ Retrieves a record by ID and updates the existing record object using the provid
 
 Parameter | Description | Type | Required | Notes |
 ----------|-------------|------|----------|-------|
-| artist | Optional | Name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
-| title | Optional | Title of the record. Enter the artist name exactly as it appears on the physical record packaging. | String |
-| price | Optional | Price to sell record in USD. | String |
-| condition | Optional | Measures the playability and overall quality of the physical record and record packaging. | Array of Strings |
+| artist | Optional | The name of the artist. Enter the artist name exactly as it appears on the record packaging. | String |
+| title | Optional | The title of the record. Enter the record title exactly as it appears on the record packaging. | String |
+| price | Optional | The price to sell record in USD. | String |
+| condition | Optional | Describes the playability and overall quality of the physical record and record packaging. | String |
 | comments | Optional | Additional notes about the record. | Array of Strings |
 
 ### Sample request
@@ -297,11 +297,11 @@ Returns the updated record object:
 ****
 
 ## Delete a record
-Merchant accounts only.
+**(Merchant accounts only)**
 
-`DELETE /api/v1/records/{recordId}/merchants/{merchantId}`
+DELETE `/records/{recordId}/merchants/{merchantId}/`
 
-Deletes a record by ID using the provided path parameter. You can only delete record objects that were created using your registered merchant ID.
+Deletes a record by ID. Delete only record objects that were created using your registered merchant ID.
 
 ### Parameters
 
@@ -330,10 +330,3 @@ curl -X DELETE \
     "response_code": 200
 }
 ```
-
-
-
-
-
-
-
