@@ -1,6 +1,6 @@
 ## The Order object
 
-Orders objects are representations of the orders created from records objects. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or by merchant ID.
+The order object is a representation of an order created from a record object. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or by merchant ID.
 
 **Orders endpoints**  
 
@@ -60,29 +60,25 @@ Orders objects are representations of the orders created from records objects. C
 | _id | | The unique system-generated order ID | String |
 | product_info | | | |
 | | record_id | The ID of the record object that was turned into an order. | String |
+| | merchant_id | The merchant ID of the merchant account that created the record object. | String |
 | customer_info | | | |
 | | username | The registered username of the customer account that created the order. | String |
 | | email | The registered email address of the customer account that created the order. | String |
 | | firstName | The registered firstName of the customer account that created the order. | String |
 | | lastName | The registered lastName of the customer account that created the order. | String |
 | shipping_info | | | |
-| | shipping_address1 | The registered shipping address of the customer account that created the order. | String |
-| | shipping_address2 | The registered shipping address of the customer account that created the order. | String |
-| | shipping_city | The registered shipping city of the customer account that created the order. | String |
-| | shipping_state | The registered shipping state of the customer account that created the order. | String |
-| | shipping_zip | The registered shipping zip code of the customer account that created the order. | String |
+| | shipping_address1 | The street address to ship the order to. | String |
+| | shipping_address2 | The street address to ship the order to. | String |
+| | shipping_city | The city of the address to ship the order to. | String |
+| | shipping_state | The state of the address to ship the order to. | String |
+| | shipping_zip | The zip code of the address to ship the order to. | String |
 | billing_info | | | |
-| |paypal_email | The registered PayPal email address of the customer account that created the order. | String |
-| | billing_address1 | The registered billing address of the customer account that created the order. | String |
-| | billing_address2 | The registered billing address of the customer account that created the order. | String |
-| | billing_city | The registered billing city of the customer account that created the order. | String |
-| | billing_state | The registered billing state of the customer account that created the order. | String |
-| | billing_zip | The registered billing zip code of the customer account that created the order. | String |
-| merchant_info | | | |
-| | merchant_id | The merchant ID of the merchant account that created the record object. | String |
-| | companyName | The registered company name of the merchant account that created the record object. | String |
-| | primaryContact | The registered primary contact of the merchant account that created the record object. | String |
-| | phoneNumber | The registered phone number of the merchant account that created the record object. | String |
+| |paypal_email | The PayPal email address used to pay for orders. | String |
+| | billing_address1 | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_address2 | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | The city of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | The state of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | The zip code of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | comments | | Additional notes about the order. | Array of Strings |
 | _createdBy | | The ID of the customer that created the record object. | 
 | created_date | | The date order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
@@ -110,23 +106,18 @@ PUT `/orders/merchants/{merchantId}/records/{recordId}/`
 | Parameter      |                    |   Required       | Description    | Type |
 | :------------- |--------------------|:-----------------| :--------------| :----|
 | shipping_info | | | |
-| | shipping_address1 | Required | The registered shipping address of the customer account creating the order. | String |
-| | shipping_address2 | Optional | The registered shipping address of the account creating the order | String |
-| | shipping_city | Required | The registered shipping city of the account creating the order | String |
-| | shipping_state | Required | The registered shipping state of the account creating the order | String |
-| | shipping_zip | Required | The registered shipping zip code of the account creating the order | String |
+| | shipping_address1 | Required | The street address to ship the order to. | String |
+| | shipping_address2 | Optional | The street address to ship the order to. | String |
+| | shipping_city | Required | The city of the address to ship the order to. | String |
+| | shipping_state | Required | The state of the address to ship the order to. | String |
+| | shipping_zip | Required | The zip code of the address to ship the order to. | String |
 | billing_info | | | |
-| |paypal_email | Required | The registered PayPal email address of the account creating the order | String |
-| | billing_address1 | Required | The registered billing address of the account creating the order | String |
-| | billing_address2 | Optional | The registered billing address of the account creating the order | String |
-| | billing_city | Required | The registered billing city of the account creating the order | String |
-| | billing_state | Required | The registered billing state of the account creating the order | String |
-| | billing_zip | Required | The registered billing zip code of the account creating the order | String |
-| merchant_info | | | |
-| | merchant_id | Required | The merchant ID of the merchant account that created the record object | String |
-| | companyName | Required | The registered company name of the account that created the record object | String |
-| | primaryContact | Required | The registered primary contact of the account that created the record object | String |
-| | phoneNumber | Required | The registered phone number of the account that created the record object | String |
+| |paypal_email | Required | The PayPal email address used to pay for orders. | String |
+| | billing_address1 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_address2 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | Optional | The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | Optional | The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | Optional | The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | comments | | Optional | Additional notes about the order | Array of Strings |
 | _createdBy | | System-generated | The unique ID of the customer that created the record object | 
 | created_date | | System-generated | The date the order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
@@ -210,7 +201,7 @@ GET `/orders/customers/{customerId}/`
 | Parameter      | Required       | Description | Type |
 | :------------- | :------------- | :-----------| :----|
 | limit | Optional | The number of record objects to return. Default is all. | Integer |
-| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name. | String |
 | offset | Optional | The index to start with. The default is 0. | Integer |
 
 ###Sample request
@@ -332,7 +323,7 @@ GET `/orders/merchants/{merchantId}/`
 | Parameter | Required | Description | Type |
 | :---------| :-----------| :----| :--------|
 | limit | Optional | The number of record objects to return. Default is all. | Integer |
-| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name. | String |
 | offset | Optional | The index to start with. The default is 0. | Integer |
 
 ###Sample request
@@ -432,7 +423,7 @@ Returns a list of order objects for the specified merchant.
 
 ****
 
-## Update an order by id
+## Update an order by ID
 **(Merchant accounts only)**
 
 Retrieves an order by id and updates the orders object using the body parameters. Update only order objects that were created using your registered merchant ID.

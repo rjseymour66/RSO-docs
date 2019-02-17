@@ -1,6 +1,11 @@
 ## The Customer object
 
-Store a representation of your customer data in a customer object. Contains your name, email, shipping address, and billing information. Customers and merchants can retrieve customer information.
+Store a representation of your personal account information in a customer object. Contains your name, email, shipping address, and billing information. Customers and merchants can retrieve customer information.
+
+**Customers endpoints** 
+
+- GET `/customers/{customerId}/`
+- PUT `/customers/{customerId}/`
 
 ### Customer object example
 
@@ -37,31 +42,31 @@ Store a representation of your customer data in a customer object. Contains your
 | Attributes | | Description | Type |
 | :----------|-| :-----------| :----| 
 | _id         | | Unique system-generated identifier for the record object. | String |
-| username | | Username used at Record Stack Overflow login.  | String |
-| firstName | | Customer first name used for billing purposes | String |
-| lastName | | Customer last name used for billing purposes | String |
-| email | | Email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
+| username | | The username of the customer account.  | String |
+| firstName | | The first name of the customer account. | String |
+| lastName | | The last name of the customer account. | String |
+| email | | The email address of the customer account. | String |
 | shipping_info | | | |
-| | shipping_address1 | Street address that you want merchants to ship record products to | String |
-| | shipping_address2 | Street address that you want merchants to ship record products to | String |
-| | shipping_city | City that you want merchants to ship record products to | String |
-| | shipping_state | State that you want merchants to ship record products to | String |
-| | shipping_zip | Zip code you want merchants to ship record products to | String |
+| | shipping_address1 | The street address that you want your order shipped to. | String |
+| | shipping_address2 | The street address that you want your order shipped to. | String |
+| | shipping_city | The city of the address that you want your order shipped to. | String |
+| | shipping_state | The state of the address that you want your order shipped to. | String |
+| | shipping_zip | The zip code of the address you your order shipped to. | String |
 | billing_info | | | |
-| |paypal_email | PayPal email address used to pay for orders | String |
-| | billing_address1 | Address associated with PayPal account, if different from shipping address | String |
-| | billing_address2 | Address associated with PayPal account, if different from shipping address | String |
-| | billing_city | City associated with PayPal account, if different from shipping address | String |
-| | billing_state | State associated with PayPal account, if different from shipping address | String |
-| | billing_zip | Zip code associated with PayPal account, if different from shipping address | String |
+| |paypal_email | The PayPal email address used to pay for orders. | String |
+| | billing_address1 | The address associated with the PayPal account, if different from shipping address. | String |
+| | billing_address2 | The address associated with the PayPal account, if different from shipping address. | String |
+| | billing_city | The city of the address associated with the PayPal account, if different from the shipping address. | String |
+| | billing_state | The state of the address associated with the PayPal account, if different from the shipping address. | String |
+| | billing_zip | The zip code of the address associated with the PayPal account, if different from the shipping address. | String |
 
 ****
 
 ## Retrieve customer information
 
-Gets the information for a specific customer ID. Customers information is only returned if the you information associated with the provided access token.
+Retrieves the information for a specific customer ID. You can update only customer objects associated with the request's access token.
 
-`GET /api/v1/customer/{customerId}`
+GET `/customer/{customerId}/`
 
 ###Parameters
 
@@ -69,7 +74,7 @@ Gets the information for a specific customer ID. Customers information is only r
 
 | Parameter      | Required       | Description | Type |
 | :------------- | :------------- | :-----------| :----|
-| {customerId}   | Required       | Refers to the `_id` of the customer you want to retrieve information for | String |
+| {customerId}   | Required       | Refers to the customer ID of the customer that you want to retrieve information for. | String |
 
 
 ### Sample request
@@ -79,7 +84,7 @@ curl -X GET http://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 
 ```
 
 ###Sample response
-Returns a customer object 
+Returns a customer object.
 
 ```json
 {
@@ -112,21 +117,14 @@ Returns a customer object
 }
 ```
 
-### Sample error response
 
-```json
-{
-  "error_message" : "Customer not found. Check customer ID",
-  "status_code": 404 
-}
-```
 ****
 
 ## Update customer by ID
 
 Retrieves the customer account by the specified ID and updates the object with the information provided in the body parameters.
 
-`PUT /api/v1/customers/{customerId}`
+PUT `/customers/{customerId}/`
 
 ###Parameters
 
@@ -134,7 +132,7 @@ Retrieves the customer account by the specified ID and updates the object with t
 
 | Parameter      | Required       | Description | Type |
 | :------------- | :------------- | :-----------| :----|
-| {customerId}   | Required       | Refers to the `_id` of the customer object you want to update | String |
+| {customerId}   | Required       | Refers to the customer ID of the customer that you want to retrieve information for. | String |
 
 
 **Body parameters**
@@ -146,18 +144,18 @@ Retrieves the customer account by the specified ID and updates the object with t
 | lastName |  |Optional | Customer last name used for billing purposes | String |
 | email |  |Optional | Email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
 | shipping_info | | | |
-| | shipping_address1 |Optional | Street address that you want merchants to ship record products to | String |
-| | shipping_address2 | Optional |Street address that you want merchants to ship record products to | String |
-| | shipping_city | Optional |City that you want merchants to ship record products to | String |
-| | shipping_state | Optional |State that you want merchants to ship record products to | String |
-| | shipping_zip | Optional |Zip code you want merchants to ship record products to | String |
+| | shipping_address1 | Optional | The street address that you want your order shipped to. | String |
+| | shipping_address2 | Optional | The street address that you want your order shipped to. | String |
+| | shipping_city | Optional | The city of the address that you want your order shipped to. | String |
+| | shipping_state | Optional | The state of the address that you want your order shipped to. | String |
+| | shipping_zip | Optional | The zip code of the address you your order shipped to. | String |
 | billing_info | | | |
-| |paypal_email | Optional |PayPal email address used to pay for orders | String |
-| | billing_address1 | Optional |Address associated with PayPal account, if different from shipping address | String |
-| | billing_address2 | Optional |Address associated with PayPal account, if different from shipping address | String |
-| | billing_city | Optional |City associated with PayPal account, if different from shipping address | String |
-| | billing_state | Optional |State associated with PayPal account, if different from shipping address | String |
-| | billing_zip | Optional | Zip code associated with PayPal account, if different from shipping address | String |
+| |paypal_email | Optional | The PayPal email address used to pay for orders. | String |
+| | billing_address1 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_address2 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | Optional | The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | Optional | The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | Optional | The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 
 ###Sample request
 
@@ -166,9 +164,9 @@ curl -X PUT http://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 
 ```
 
 ###Sample response
-Returns an updated customer object
+Returns an updated customer object.
 
-```json
+```json hl_lines="3"
 {
     "_id": "<customerID>",
     "username": "newUserName",
@@ -198,45 +196,3 @@ Returns an updated customer object
     "__v": 0
 }
 ```
-
-### Sample error response
-
-```json
-{
-  "error_message" : "Customer not found. Check customer ID",
-  "status_code": 404 
-}
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

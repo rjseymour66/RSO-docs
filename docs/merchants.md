@@ -1,6 +1,11 @@
 ## The Merchant object
 
-Store a representation of your company data in a merchant object. Contains your organization name, primary contact name, email, phone number, and mailing address. Customers and merchants can retrieve merchant information. 
+Store a representation of your company information in a merchant object. Contains your organization name, primary contact name, email, phone number, and mailing address. Customers and merchants can retrieve merchant information. 
+
+**Merchants endpoints**  
+
+- GET `/merchants/{merchantId}/`  
+- PUT `/merchants/{merchantId}/`  
 
 ### Merchant object example
 
@@ -28,26 +33,26 @@ Store a representation of your company data in a merchant object. Contains your 
 
 | Attributes | | Description | Type |
 | :----------|-| :-----------| :----| 
-| merchantAccount | | Identifies the account as a merchant account | Boolean | 
-| _id         | | Unique system-generated identifier for the record object. | String |
-| companyName | | Name of company that accepts customer payments | String |
-| primaryContact | | Customer contact for questions regarding inventory, order fulfillment, returns, etc. | String |
-| email | | Email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
-| phoneNumber | | Phone number for `primaryContact` or automated system to answer customer calls regarding inventory, order fulfillment, returns, etc. | String | 
+| merchantAccount | | Identifies the account as a merchant account. | Boolean | 
+| _id         | | Unique system-generated identifier of the record object. | String |
+| companyName | | The name of the company that accepts customer payments. | String |
+| primaryContact | | The customer contact for questions regarding inventory, order fulfillment, returns, etc. | String |
+| email | | The email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
+| phoneNumber | | The phone number for `primaryContact` or the automated system to answer customer calls regarding inventory, order fulfillment, returns, etc. | String | 
 | address | | | |
-| | shipping_address1 | Street address that record products ship or that accepts returns | String |
-| | shipping_address2 | Street address that merchant ships record products from | String |
-| | shipping_city | City that merchant ships record products from | String |
-| | shipping_state | State that merchant ships record products from | String |
-| | shipping_zip | Zip code that merchant ships record products from | String |
+| | shipping_address1 | The street address that the merchant ships orders from and accepts returns from. | String |
+| | shipping_address2 | The street address that the merchant ships orders from and accepts returns from. | String |
+| | shipping_city | The city of the street address that the merchant ships orders from. | String |
+| | shipping_state | The state of the street address that the merchant ships orders from. | String |
+| | shipping_zip | The zip code of the street address that the merchant ships orders from. | String |
 
 ****
 
 ## Retrieve merchant information
 
-`GET /api/v1/merchant/{merchantId}`
+GET `/merchant/{merchantId}/`
 
-Gets the information for a specific merchant ID.
+Retrieves the information for a specific merchant ID.
 
 ###Parameters
 
@@ -67,7 +72,7 @@ curl -X GET http://www.recordstackoverflow.com/api/v1/merchants/{merchantId} -H 
 
 ### Sample response
 
-Returns merchant information that can be public.
+Returns the specified merchant information.
 
 ```json
 {
@@ -90,10 +95,11 @@ Returns merchant information that can be public.
 ****
 
 ## Update merchant by ID
+**(Merchant accounts only)**
 
-Merchant accounts only. Retrieves a merchant by ID and updates the existing merchant object using the provided body parameters. You can only update merchant objects that were created using your registered merchant ID.
+Retrieves a merchant by ID and updates the existing merchant object with the information provided in the body parameters. You can update only merchant objects associated with the request's access token.
 
-`PUT /api/v1/merchant/{merchantId}`
+PUT `/merchant/{merchantId}/`
 
 
 ###Parameters
@@ -108,15 +114,15 @@ Merchant accounts only. Retrieves a merchant by ID and updates the existing merc
 
 | Parameter | Required    | Description | Type |
 | :---------| :-----------| :-----------| :----|
-| companyName |  Optional | Name of company that accepts customer payments | String |
-| primaryContact | Optional | Customer contact for questions regarding inventory, order fulfillment, returns, etc. | String |
-| email | Optional | Email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
-| phoneNumber | Optional | Phone number for `primaryContact` or automated system to answer customer calls regarding inventory, order fulfillment, returns, etc. | String | 
-| shipping_address1 | Optional | Street address that record products ship or that accepts returns | String |
-| shipping_address2 | Optional |Street address that merchant ships record products from | String |
-| shipping_city | Optional | City that merchant ships record products from | String |
-| shipping_state | Optional | State that merchant ships record products from | String |
-| shipping_zip | Optional | Zip code that merchant ships record products from | String |
+| companyName |  Optional | The name of the company that accepts customer payments. | String |
+| primaryContact | Optional | The customer contact for questions regarding inventory, order fulfillment, returns, etc. | String |
+| email | Optional | The email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
+| phoneNumber | Optional | The phone number for customer calls regarding inventory, order fulfillment, returns, etc. | String | 
+| shipping_address1 | Optional | The street address that the merchant ships record products from and accepts returns from. | String |
+| shipping_address2 | Optional | The street address that the merchant ships record products from and accepts returns from. | String |
+| shipping_city | Optional | The city that the merchant ships record products from. | String |
+| shipping_state | Optional | The state that the merchant ships record products from. | String |
+| shipping_zip | Optional | The zip code that the merchant ships record products from. | String |
 
 ###Sample request
 
@@ -124,12 +130,12 @@ Merchant accounts only. Retrieves a merchant by ID and updates the existing merc
 curl -X PUT \
   http://www.recordstackoverflow.com/api/v1/merchants/{merchantID} \
   -H 'Authorization: Bearer <access-token>' \
-  -d 'primaryContact=Updated%20Contact&undefined='
+  -d 'primaryContact=Updated%20Contact'
 ```
 
 ###Sample response
 
-```json
+```json hl_lines="5"
 {
     "merchantAccount": true,
     "_id": "<merchantID>",
@@ -150,37 +156,3 @@ curl -X PUT \
     "__v": 0
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

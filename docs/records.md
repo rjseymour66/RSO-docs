@@ -1,6 +1,6 @@
 ## The Record object
 
-Store representations of each record item you sell in `Record` objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.
+Store representations of each record item you sell in record objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.
 
 **Records endpoints**
 
@@ -31,7 +31,7 @@ Store representations of each record item you sell in `Record` objects. Contains
 
 | Attributes | Description | Type | 
 | :----------| :-----------| :----| 
-| _id | Unique system-generated identifier for the record object. | String |
+| _id | Unique system-generated identifier of the record object. | String |
 | artist | The name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
 | title | The title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
 | price | The price to sell record in USD. | String |
