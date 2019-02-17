@@ -424,8 +424,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#path-parameters" title="Path Parameters" class="md-nav__link">
-    Path Parameters
+  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+    Parameters
   </a>
   
 </li>
@@ -458,7 +458,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+  <a href="#parameters_4" title="Parameters" class="md-nav__link">
     Parameters
   </a>
   
@@ -702,8 +702,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#path-parameters" title="Path Parameters" class="md-nav__link">
-    Path Parameters
+  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+    Parameters
   </a>
   
 </li>
@@ -736,7 +736,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameters_3" title="Parameters" class="md-nav__link">
+  <a href="#parameters_4" title="Parameters" class="md-nav__link">
     Parameters
   </a>
   
@@ -781,7 +781,7 @@
                   <h1>Records</h1>
                 
                 <h2 id="the-record-object">The Record object<a class="headerlink" href="#the-record-object" title="Permanent link">&para;</a></h2>
-<p>Store representations of each record item you sell in <code>Record</code> objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or records added by a specified merchant. Records are physical goods.</p>
+<p>Store representations of each record item you sell in <code>Record</code> objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.</p>
 <p><strong>Records endpoints</strong></p>
 <ul>
 <li>POST <code>/records/</code>  </li>
@@ -823,22 +823,22 @@
 </tr>
 <tr>
 <td align="left">artist</td>
-<td align="left">Name of the artist. Enter the artist name exactly as it appears on the physical record packaging.</td>
+<td align="left">The name of the artist. Enter the artist name exactly as it appears on the physical record packaging.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">title</td>
-<td align="left">Title of the record. Enter the record title exactly as it appears on the physical record packaging.</td>
+<td align="left">The title of the record. Enter the record title exactly as it appears on the physical record packaging.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">price</td>
-<td align="left">Price to sell record in USD.</td>
+<td align="left">The price to sell record in USD.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">condition</td>
-<td align="left">Measures the playability and overall quality of the physical record and packaging.</td>
+<td align="left">Describes the playability and overall quality of the physical record and packaging.</td>
 <td align="left">Array of Strings</td>
 </tr>
 <tr>
@@ -848,7 +848,7 @@
 </tr>
 <tr>
 <td align="left">created_date</td>
-<td align="left">Date record object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD</td>
+<td align="left">The date the record object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD</td>
 <td align="left">Date</td>
 </tr>
 </tbody>
@@ -856,7 +856,7 @@
 <hr />
 <h2 id="create-a-record">Create a record<a class="headerlink" href="#create-a-record" title="Permanent link">&para;</a></h2>
 <p>Creates a new record object.</p>
-<p><strong>POST <code>api/v1/records/</code></strong></p>
+<p>POST <code>/records/</code></p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <p><strong>Body Parameters</strong></p>
 <table>
@@ -872,25 +872,25 @@
 <tr>
 <td align="left">artist</td>
 <td align="left">Required</td>
-<td align="left">Name of the artist. Enter the artist name exactly as it appears on the physical record packaging.</td>
+<td align="left">The name of the artist. Enter the artist name exactly as it appears on the physical record packaging.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">title</td>
 <td align="left">Required</td>
-<td align="left">Title of the record. Enter the record title exactly as it appears on the physical record packaging.</td>
+<td align="left">The title of the record. Enter the record title exactly as it appears on the physical record packaging.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">price</td>
 <td align="left">Required</td>
-<td align="left">Price to sell record in USD.</td>
+<td align="left">The price to sell record in USD.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">condition</td>
 <td align="left">Required</td>
-<td align="left">Measures the playability and overall quality of the physical record and packaging.</td>
+<td align="left">Describes the playability and overall quality of the physical record and packaging.</td>
 <td align="left">Array of Strings</td>
 </tr>
 <tr>
@@ -930,8 +930,8 @@
 
 <hr />
 <h2 id="retrieve-all-records">Retrieve all records<a class="headerlink" href="#retrieve-all-records" title="Permanent link">&para;</a></h2>
-<p><code>GET /api/v1/records</code></p>
-<p>Gets all records using the specified parameters.</p>
+<p>GET <code>/records/</code></p>
+<p>Retrieves all records. Filter results using the query parameters.</p>
 <h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <p><strong>Query string parameters</strong></p>
 <table>
@@ -947,26 +947,26 @@
 <tr>
 <td align="left">artist</td>
 <td align="left">Optional</td>
-<td align="left">Name of artist to return in search</td>
+<td align="left">Name of artist to search for.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">limit</td>
 <td align="left">Optional</td>
-<td align="left">Number of record objects to return</td>
+<td align="left">The number of record objects to return. Default is all.</td>
 <td align="left">Integer</td>
 </tr>
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">Sorts results alphabetically by artist name. "asc" or "1" sort alphabetically. "desc" or "-1" sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left">offset</td>
 <td align="left">Optional</td>
 <td align="left">The index to start with. The default is 0.</td>
-<td align="left">integer</td>
+<td align="left">Integer</td>
 </tr>
 </tbody>
 </table>
@@ -1026,8 +1026,8 @@
 
 <hr />
 <h2 id="retrieve-all-records-by-merchant">Retrieve all records by merchant<a class="headerlink" href="#retrieve-all-records-by-merchant" title="Permanent link">&para;</a></h2>
-<p><code>GET /api/v1/records/merchant/{merchantId}</code></p>
-<p>Gets all records for sale for a specific merchant ID.</p>
+<p>GET <code>/records/merchant/{merchantId}/</code></p>
+<p>Retrieves all records for sale for a specific merchant ID.</p>
 <h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
@@ -1058,13 +1058,13 @@
 <tr>
 <td align="left">limit</td>
 <td align="left">Optional</td>
-<td align="left">Number of record objects to return</td>
+<td align="left">The number of record objects to return. Default is all.</td>
 <td align="left">Integer</td>
 </tr>
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">Sorts results alphabetically by artist name. "asc" and "1" sort alphabetically. "desc" and "-1" sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1118,10 +1118,10 @@
 
 <hr />
 <h2 id="update-a-record">Update a record<a class="headerlink" href="#update-a-record" title="Permanent link">&para;</a></h2>
-<p>(Merchant accounts only)</p>
+<p><strong>(Merchant accounts only)</strong></p>
 <p><code>PUT /api/v1/records/{recordId}</code></p>
-<p>Retrieves a record by ID and updates the existing record object using the provided body parameters. You can only update record objects that were created using your registered merchant ID.</p>
-<h3 id="path-parameters">Path Parameters<a class="headerlink" href="#path-parameters" title="Permanent link">&para;</a></h3>
+<p>Retrieves a record by ID and updates the existing record object using the body parameters. Update only record objects that were created using your registered merchant ID.</p>
+<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
 <thead>
@@ -1152,29 +1152,29 @@
 <tr>
 <td>artist</td>
 <td>Optional</td>
-<td>Name of the artist. Enter the artist name exactly as it appears on the physical record packaging.</td>
+<td>The name of the artist. Enter the artist name exactly as it appears on the record packaging.</td>
 <td>String</td>
 <td></td>
 </tr>
 <tr>
 <td>title</td>
 <td>Optional</td>
-<td>Title of the record. Enter the artist name exactly as it appears on the physical record packaging.</td>
+<td>The title of the record. Enter the record title exactly as it appears on the record packaging.</td>
 <td>String</td>
 <td></td>
 </tr>
 <tr>
 <td>price</td>
 <td>Optional</td>
-<td>Price to sell record in USD.</td>
+<td>The price to sell record in USD.</td>
 <td>String</td>
 <td></td>
 </tr>
 <tr>
 <td>condition</td>
 <td>Optional</td>
-<td>Measures the playability and overall quality of the physical record and record packaging.</td>
-<td>Array of Strings</td>
+<td>Describes the playability and overall quality of the physical record and record packaging.</td>
+<td>String</td>
 <td></td>
 </tr>
 <tr>
@@ -1215,10 +1215,10 @@
 
 <hr />
 <h2 id="delete-a-record">Delete a record<a class="headerlink" href="#delete-a-record" title="Permanent link">&para;</a></h2>
-<p>Merchant accounts only.</p>
-<p><code>DELETE /api/v1/records/{recordId}/merchants/{merchantId}</code></p>
-<p>Deletes a record by ID using the provided path parameter. You can only delete record objects that were created using your registered merchant ID.</p>
-<h3 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
+<p><strong>(Merchant accounts only)</strong></p>
+<p>DELETE <code>/records/{recordId}/merchants/{merchantId}/</code></p>
+<p>Deletes a record by ID. Delete only record objects that were created using your registered merchant ID.</p>
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
 <p><strong>Path parameters</strong></p>
 <table>
 <thead>
