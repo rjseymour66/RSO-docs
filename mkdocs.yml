@@ -31,7 +31,7 @@ nav:
 - Customers: customers.md
 - Quick Reference Library: quick-reference.md
 - API Glossary: api-glossary.md
-- API Best Practices: api-best-practices.md
+# - API Best Practices: api-best-practices.md
 
 # Extensions
 markdown_extensions:
