@@ -2,7 +2,13 @@
 
 Store representations of each record item you sell in record objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.
 
-**Records endpoints**
+### Base path  
+
+www.recordstackoverflow.com/api/v1/
+
+### Records endpoints
+
+
 
 - POST `/records/`  
 - GET `/records/`  
@@ -11,7 +17,7 @@ Store representations of each record item you sell in record objects. Contains i
 - DELETE `/records/{recordId}/merchants/{merchantId}/`  
 
 
-**Record object example**
+### Sample record object
 
 ```json
 {
@@ -34,7 +40,7 @@ Store representations of each record item you sell in record objects. Contains i
 | _id | Unique system-generated identifier of the record object. | String |
 | artist | The name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
 | title | The title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
-| price | The price to sell record in USD. | String |
+| price | The sale price of the record in USD. | String |
 | condition | Describes the playability and overall quality of the physical record and packaging. | Array of Strings |
 | comments | Additional notes about the record. | Array of Strings |
 | created_date | The date the record object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
@@ -55,7 +61,7 @@ POST `/records/`
 | :------------- | :------------- | :-----------| :----|
 | artist | Required | The name of the artist. Enter the artist name exactly as it appears on the physical record packaging. | String |
 | title | Required | The title of the record. Enter the record title exactly as it appears on the physical record packaging. | String |
-| price | Required | The price to sell record in USD. | String |
+| price | Required | The sale price of the record in USD. | String |
 | condition | Required | Describes the playability and overall quality of the physical record and packaging. | Array of Strings |
 | comments | Optional | Additional notes about the record. | Array of Strings |
 
@@ -104,7 +110,7 @@ Retrieves all records. Filter results using the query parameters.
 | :---------| :-----------| :-----------| :--------| 
 | artist    | Optional | Name of artist to search for. | String |
 | limit | Optional | The number of record objects to return. Default is all. | Integer |
-| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name. | String |
 | offset | Optional | The index to start with. The default is 0. | Integer |
 
 
@@ -187,7 +193,7 @@ Retrieves all records for sale for a specific merchant ID.
 | Parameter | Required | Description | Type |
 | :---------| :-----------| :----| :--------|
 | limit | Optional | The number of record objects to return. Default is all. | Integer |
-| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically. | String |
+| sort | Optional | The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name. | String |
 | offset | Optional | The index to start with. The default is 0. | integer |
 
 ### Sample request
@@ -260,7 +266,7 @@ Parameter | Description | Type | Required | Notes |
 ----------|-------------|------|----------|-------|
 | artist | Optional | The name of the artist. Enter the artist name exactly as it appears on the record packaging. | String |
 | title | Optional | The title of the record. Enter the record title exactly as it appears on the record packaging. | String |
-| price | Optional | The price to sell record in USD. | String |
+| price | Optional | The sale price of the record in USD. | String |
 | condition | Optional | Describes the playability and overall quality of the physical record and record packaging. | String |
 | comments | Optional | Additional notes about the record. | Array of Strings |
 

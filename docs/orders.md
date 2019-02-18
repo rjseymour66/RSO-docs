@@ -2,7 +2,12 @@
 
 The order object is a representation of an order created from a record object. Contains information about the order status, original record object, customer, customer shipping information, customer billing information, merchant information, and any additional comments. Orders can be created, retrieved, updated, and cancelled. Request orders by customer ID or by merchant ID.
 
-**Orders endpoints**  
+
+### Base path  
+
+www.recordstackoverflow.com/api/v1/
+
+### Orders endpoints  
 
 - PUT `/orders/merchants/{merchantId}/records/{recordId}/`
 - GET `/orders/customers/{customerId}/`
@@ -10,7 +15,7 @@ The order object is a representation of an order created from a record object. C
 - PUT `/orders/{orderId}/`
 - DELETE `/orders/{orderId}/customers/{customerId}/`
 
-**Orders object example**
+### Sample orders object
 
 ```json
 {
@@ -69,16 +74,16 @@ The order object is a representation of an order created from a record object. C
 | shipping_info | | | |
 | | shipping_address1 | The street address to ship the order to. | String |
 | | shipping_address2 | The street address to ship the order to. | String |
-| | shipping_city | The city of the address to ship the order to. | String |
-| | shipping_state | The state of the address to ship the order to. | String |
-| | shipping_zip | The zip code of the address to ship the order to. | String |
+| | shipping_city | The city to ship the order to. | String |
+| | shipping_state | The state to ship the order to. | String |
+| | shipping_zip | The zip code to ship the order to. | String |
 | billing_info | | | |
 | |paypal_email | The PayPal email address used to pay for orders. | String |
 | | billing_address1 | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | | billing_address2 | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_city | The city of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_state | The state of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_zip | The zip code of the street address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | The city associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | The state associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | The zip code associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | comments | | Additional notes about the order. | Array of Strings |
 | _createdBy | | The ID of the customer that created the record object. | 
 | created_date | | The date order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
@@ -108,16 +113,16 @@ PUT `/orders/merchants/{merchantId}/records/{recordId}/`
 | shipping_info | | | |
 | | shipping_address1 | Required | The street address to ship the order to. | String |
 | | shipping_address2 | Optional | The street address to ship the order to. | String |
-| | shipping_city | Required | The city of the address to ship the order to. | String |
-| | shipping_state | Required | The state of the address to ship the order to. | String |
-| | shipping_zip | Required | The zip code of the address to ship the order to. | String |
+| | shipping_city | Required | The city to ship the order to. | String |
+| | shipping_state | Required | The state to ship the order to. | String |
+| | shipping_zip | Required | The zip code to ship the order to. | String |
 | billing_info | | | |
 | |paypal_email | Required | The PayPal email address used to pay for orders. | String |
 | | billing_address1 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | | billing_address2 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_city | Optional | The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_state | Optional | The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
-| | billing_zip | Optional | The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | Optional | The city associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | Optional | The state associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | Optional | The zip code associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 | comments | | Optional | Additional notes about the order | Array of Strings |
 | _createdBy | | System-generated | The unique ID of the customer that created the record object | 
 | created_date | | System-generated | The date the order object was created. The date is system-generated in GMT format YYYY-MM-DDThh:mmTZD | Date |  
@@ -444,19 +449,18 @@ PUT `/orders/{orderId}/`
 | Parameter      |                    |   Required       | Description    | Type |
 | :------------- |--------------------|:-----------------| :--------------| :----|
 | shipping_info | | | |
-| | shipping_address1 | Optional | The registered shipping address of the customer account creating the order. | String |
-| | shipping_address2 | Optional | The registered shipping address of the account creating the order | String |
-| | shipping_city | Optional | The registered shipping city of the account creating the order | String |
-| | shipping_state | Optional | The registered shipping state of the account creating the order | String |
-| | shipping_zip | Optional | The registered shipping zip code of the account creating the order | String |
+| | shipping_address1 | Optional | The street address to ship the order to. | String |
+| | shipping_address2 | Optional | The street address to ship the order to. | String |
+| | shipping_city | Optional | The city to ship the order to. | String |
+| | shipping_state | Optional | The state to ship the order to. | String |
+| | shipping_zip | Optional | The zip code to ship the order to. | String |
 | billing_info | | | |
-| |paypal_email | Optional | The registered PayPal email address of the account creating the order | String |
-| | billing_address1 | Optional | The registered billing address of the account creating the order | String |
-| | billing_address2 | Optional | The registered billing address of the account creating the order | String |
-| | billing_city | Optional | The registered billing city of the account creating the order | String |
-| | billing_state | Optional | The registered billing state of the account creating the order | String |
-| | billing_zip | Optional | The registered billing zip code of the account creating the order | String |
-| comments | | Optional | Additional notes about the order | Array of Strings |
+| |paypal_email | Optional | The PayPal email address used to pay for orders. | String |
+| | billing_address1 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_address2 | Optional | The address associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_city | Optional | The city associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_state | Optional | The state associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
+| | billing_zip | Optional | The zip code associated with the PayPal account. Not required if the billing address is the same as the shipping address. | String |
 
 ### Sample request
 

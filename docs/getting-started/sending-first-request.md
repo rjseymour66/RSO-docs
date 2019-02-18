@@ -1,6 +1,6 @@
-This tutorial uses Postman, an API testing tool, to complete the API call. If you do not have a Postman account, download and install [Postman](https://www.getpostman.com/). For information on how to use Postman, explore the Postman [Getting Started tutorial](https://learning.getpostman.com/getting-started/).
+This tutorial uses Postman, an API testing tool, to complete the API call. If you do not have a Postman account, download and install [Postman](https://www.getpostman.com/). For information on how to use Postman, explore the [Getting Started with Postman](https://learning.getpostman.com/getting-started/) tutorial.
 
-If you are already familiar with Postman, click [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ab12924f72b9d522cd62) to access the Record Stack Overflow Postman request collection. Select **Sending first request demo** from **RSO-getting-started**, then add your information to the template and click **Send**.
+If you are already familiar with Postman, click [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ab12924f72b9d522cd62) to access the Record Stack Overflow Postman request collection. Select **Sending first request demo** from **RSO-getting-started**, then add your access token information to the **Headers** section and click **Send**.
 
 !!! note
     There are various API testing tools. [Read this article](https://alternativeto.net/software/postman/) to explore alternatives to Postman.

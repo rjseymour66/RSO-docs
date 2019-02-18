@@ -2,12 +2,17 @@
 
 Store a representation of your company information in a merchant object. Contains your organization name, primary contact name, email, phone number, and mailing address. Customers and merchants can retrieve merchant information. 
 
-**Merchants endpoints**  
+
+### Base path  
+
+www.recordstackoverflow.com/api/v1/
+
+### Merchants endpoints
 
 - GET `/merchants/{merchantId}/`  
 - PUT `/merchants/{merchantId}/`  
 
-### Merchant object example
+### Sample merchant object
 
 ```json
 {
@@ -42,9 +47,9 @@ Store a representation of your company information in a merchant object. Contain
 | address | | | |
 | | shipping_address1 | The street address that the merchant ships orders from and accepts returns from. | String |
 | | shipping_address2 | The street address that the merchant ships orders from and accepts returns from. | String |
-| | shipping_city | The city of the street address that the merchant ships orders from. | String |
-| | shipping_state | The state of the street address that the merchant ships orders from. | String |
-| | shipping_zip | The zip code of the street address that the merchant ships orders from. | String |
+| | shipping_city | The city that the merchant ships orders from. | String |
+| | shipping_state | The state that the merchant ships orders from. | String |
+| | shipping_zip | The zip code that the merchant ships orders from. | String |
 
 ****
 
@@ -118,11 +123,11 @@ PUT `/merchant/{merchantId}/`
 | primaryContact | Optional | The customer contact for questions regarding inventory, order fulfillment, returns, etc. | String |
 | email | Optional | The email address for customer questions regarding inventory, order fulfillment, returns, etc. | String |
 | phoneNumber | Optional | The phone number for customer calls regarding inventory, order fulfillment, returns, etc. | String | 
-| shipping_address1 | Optional | The street address that the merchant ships record products from and accepts returns from. | String |
-| shipping_address2 | Optional | The street address that the merchant ships record products from and accepts returns from. | String |
-| shipping_city | Optional | The city that the merchant ships record products from. | String |
-| shipping_state | Optional | The state that the merchant ships record products from. | String |
-| shipping_zip | Optional | The zip code that the merchant ships record products from. | String |
+| shipping_address1 | Optional | The street address that the merchant ships orders from and accepts returns from. | String |
+| shipping_address2 | Optional | The street address that the merchant ships orders from and accepts returns from. | String |
+| shipping_city | Optional | The city that the merchant ships orders from. | String |
+| shipping_state | Optional | The state that the merchant ships orders from. | String |
+| shipping_zip | Optional | The zip code that the merchant ships orders from. | String |
 
 ###Sample request
 
