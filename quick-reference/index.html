@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#records" tabindex="1" class="md-skip">
+      <a href="#base-path" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -355,6 +355,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#records" title="Records" class="md-nav__link">
     Records
   </a>
@@ -424,6 +431,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#records" title="Records" class="md-nav__link">
     Records
   </a>
@@ -470,38 +484,167 @@
                 
                   <h1>Quick Reference Library</h1>
                 
-                <h2 id="records">Records<a class="headerlink" href="#records" title="Permanent link">&para;</a></h2>
-<p><a href="../records/"><code>/records/</code></a><br />
-Create a new record  </p>
-<p><a href="../records/"><code>/records/</code></a> <br />
-Retrieve all records  </p>
-<p><a href="../records/"><code>/records/merchant/{merchantId}/</code></a><br />
-Retrieve all records by merchant  </p>
-<p><a href="../records/"><code>/records/{recordId}/</code></a><br />
-Update a record  </p>
-<p><a href="../records/"><code>/records/{recordId}/merchants/{merchantId}/</code></a><br />
-Delete a record  </p>
+                <h2 id="base-path">Base path<a class="headerlink" href="#base-path" title="Permanent link">&para;</a></h2>
+<p>www.recordstackoverflow.com/api/v1/</p>
+<h2 id="records">Records<a class="headerlink" href="#records" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">HTTP Method</th>
+<th align="left">URL</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">POST</td>
+<td align="left"><a href="../records/">/records/</a></td>
+<td align="left">Create a new record</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../records/">/records/</a></td>
+<td align="left">Retrieve all records</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../records/">/records/merchant/{merchantId}/</a></td>
+<td align="left">Retrieve all records by merchant</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left"><a href="../records/">/records/{recordId}/</a></td>
+<td align="left">Update a record</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left"><a href="../records/">/records/{recordId}/merchants/{merchantId}/</a></td>
+<td align="left">Delete a record</td>
+</tr>
+</tbody>
+</table>
+<!-- [`/records/`](records.md)  
+Create a new record
+
+[`/records/`](records.md)   
+Retrieve all records  
+
+[`/records/merchant/{merchantId}/`](records.md)  
+Retrieve all records by merchant  
+
+[`/records/{recordId}/`](records.md)  
+Update a record  
+
+[`/records/{recordId}/merchants/{merchantId}/`](records.md)  
+Delete a record   -->
+
 <h2 id="orders">Orders<a class="headerlink" href="#orders" title="Permanent link">&para;</a></h2>
-<p><a href="../orders/"><code>/orders/merchants/{merchantId}/records/{recordId}/</code></a><br />
-Create and order  </p>
-<p><a href="../orders/"><code>/orders/customers/{customerId}/</code></a><br />
-Retrieve all orders for a customer  </p>
-<p><a href="../orders/"><code>/orders/merchants/{merchantId}/</code></a><br />
-Retrieve all orders for a merchant  </p>
-<p><a href="../orders/"><code>/orders/{orderId}/</code></a><br />
-Update an order by ID  </p>
-<p><a href="../orders/"><code>/orders/{orderId}/customers/{customerId}/</code></a><br />
-Delete an order  </p>
+<table>
+<thead>
+<tr>
+<th align="left">HTTP Method</th>
+<th align="left">URL</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">POST</td>
+<td align="left"><a href="../orders/">/orders/merchants/{merchantId}/records/{recordId}/</a></td>
+<td align="left">Create and order</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../orders/">/orders/customers/{customerId}/</a></td>
+<td align="left">Retrieve all orders for a customer</td>
+</tr>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../orders/">/orders/merchants/{merchantId}/</a></td>
+<td align="left">Retrieve all orders for a merchant</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left"><a href="../orders/">/orders/{orderId}/</a></td>
+<td align="left">Update an order by ID</td>
+</tr>
+<tr>
+<td align="left">DELETE</td>
+<td align="left"><a href="../orders/">/orders/{orderId}/customers/{customerId}/</a></td>
+<td align="left">Delete an order</td>
+</tr>
+</tbody>
+</table>
+<!-- [`/orders/merchants/{merchantId}/records/{recordId}/`](orders.md)  
+Create and order
+
+[`/orders/customers/{customerId}/`](orders.md)  
+Retrieve all orders for a customer  
+
+[`/orders/merchants/{merchantId}/`](orders.md)  
+Retrieve all orders for a merchant  
+
+[`/orders/{orderId}/`](orders.md)  
+Update an order by ID  
+
+[`/orders/{orderId}/customers/{customerId}/`](orders.md)  
+Delete an order   -->
+
 <h2 id="merchants">Merchants<a class="headerlink" href="#merchants" title="Permanent link">&para;</a></h2>
-<p><a href="../merchants/"><code>/merchants/{merchantId}/</code></a><br />
-Retrieve merchant information  </p>
-<p><a href="../merchants/"><code>/merchants/{merchantId}/</code></a><br />
-Update a merchant by ID  </p>
+<table>
+<thead>
+<tr>
+<th align="left">HTTP Method</th>
+<th align="left">URL</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../merchants/">/merchants/{merchantId}/</a></td>
+<td align="left">Retrieve merchant information</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left"><a href="../merchants/">/merchants/{merchantId}/</a></td>
+<td align="left">Update a merchant by ID</td>
+</tr>
+</tbody>
+</table>
+<!-- [`/merchants/{merchantId}/`](merchants.md)  
+Retrieve merchant information
+
+[`/merchants/{merchantId}/`](merchants.md)  
+Update a merchant by ID   -->
+
 <h2 id="customers">Customers<a class="headerlink" href="#customers" title="Permanent link">&para;</a></h2>
-<p><a href="../customers/"><code>/customers/{customerId}/</code></a><br />
-Retrieve customer information  </p>
-<p><a href="../customers/"><code>/customers/{customerId}/</code></a><br />
-Update a customer by ID  </p>
+<table>
+<thead>
+<tr>
+<th align="left">HTTP Method</th>
+<th align="left">URL</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GET</td>
+<td align="left"><a href="../customers/">/customers/{customerId}/</a></td>
+<td align="left">Retrieve customer information</td>
+</tr>
+<tr>
+<td align="left">PUT</td>
+<td align="left"><a href="../customers/">/customers/{customerId}/</a></td>
+<td align="left">Update a customer by ID</td>
+</tr>
+</tbody>
+</table>
+<!-- [`/customers/{customerId}/`](customers.md)  
+Retrieve customer information
+
+[`/customers/{customerId}/`](customers.md)  
+Update a customer by ID   -->
                 
                   
                 

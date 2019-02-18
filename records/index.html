@@ -311,6 +311,33 @@
     The Record object
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records-endpoints" title="Records endpoints" class="md-nav__link">
+    Records endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-record-object" title="Sample record object" class="md-nav__link">
+    Sample record object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -577,6 +604,33 @@
     The Record object
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records-endpoints" title="Records endpoints" class="md-nav__link">
+    Records endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-record-object" title="Sample record object" class="md-nav__link">
+    Sample record object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -770,7 +824,9 @@
                 
                 <h2 id="the-record-object">The Record object<a class="headerlink" href="#the-record-object" title="Permanent link">&para;</a></h2>
 <p>Store representations of each record item you sell in record objects. Contains information about the record for sale, including the artist, record title, price, and condition. Records can be added, requested, updated, and deleted. Request records by artist name or by a specified merchant. Records are physical goods.</p>
-<p><strong>Records endpoints</strong></p>
+<h3 id="base-path">Base path<a class="headerlink" href="#base-path" title="Permanent link">&para;</a></h3>
+<p>www.recordstackoverflow.com/api/v1/</p>
+<h3 id="records-endpoints">Records endpoints<a class="headerlink" href="#records-endpoints" title="Permanent link">&para;</a></h3>
 <ul>
 <li>POST <code>/records/</code>  </li>
 <li>GET <code>/records/</code>  </li>
@@ -778,7 +834,7 @@
 <li>PUT <code>/records/{recordId}/</code>  </li>
 <li>DELETE <code>/records/{recordId}/merchants/{merchantId}/</code>  </li>
 </ul>
-<p><strong>Record object example</strong></p>
+<h3 id="sample-record-object">Sample record object<a class="headerlink" href="#sample-record-object" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;recordID&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Artist Example&quot;</span><span class="p">,</span>
@@ -821,7 +877,7 @@
 </tr>
 <tr>
 <td align="left">price</td>
-<td align="left">The price to sell record in USD.</td>
+<td align="left">The sale price of the record in USD.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -872,7 +928,7 @@
 <tr>
 <td align="left">price</td>
 <td align="left">Required</td>
-<td align="left">The price to sell record in USD.</td>
+<td align="left">The sale price of the record in USD.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -947,7 +1003,7 @@
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1052,7 +1108,7 @@
 <tr>
 <td align="left">sort</td>
 <td align="left">Optional</td>
-<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically. Use "desc" or "-1" to sort reverse-alphabetically.</td>
+<td align="left">The order results are returned in. Use "asc" or "1" to sort alphabetically by artist name. Use "desc" or "-1" to sort reverse-alphabetically by artist name.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -1154,7 +1210,7 @@
 <tr>
 <td>price</td>
 <td>Optional</td>
-<td>The price to sell record in USD.</td>
+<td>The sale price of the record in USD.</td>
 <td>String</td>
 <td></td>
 </tr>

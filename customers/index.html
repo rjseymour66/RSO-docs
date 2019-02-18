@@ -351,8 +351,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#customer-object-example" title="Customer object example" class="md-nav__link">
-    Customer object example
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customers-endpoints" title="Customers endpoints" class="md-nav__link">
+    Customers endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-customer-object" title="Sample customer object" class="md-nav__link">
+    Sample customer object
   </a>
   
 </li>
@@ -492,8 +506,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#customer-object-example" title="Customer object example" class="md-nav__link">
-    Customer object example
+  <a href="#base-path" title="Base path" class="md-nav__link">
+    Base path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customers-endpoints" title="Customers endpoints" class="md-nav__link">
+    Customers endpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-customer-object" title="Sample customer object" class="md-nav__link">
+    Sample customer object
   </a>
   
 </li>
@@ -592,12 +620,14 @@
                 
                 <h2 id="the-customer-object">The Customer object<a class="headerlink" href="#the-customer-object" title="Permanent link">&para;</a></h2>
 <p>Store a representation of your personal account information in a customer object. Contains your name, email, shipping address, and billing information. Customers and merchants can retrieve customer information.</p>
-<p><strong>Customers endpoints</strong> </p>
+<h3 id="base-path">Base path<a class="headerlink" href="#base-path" title="Permanent link">&para;</a></h3>
+<p>www.recordstackoverflow.com/api/v1/</p>
+<h3 id="customers-endpoints">Customers endpoints<a class="headerlink" href="#customers-endpoints" title="Permanent link">&para;</a></h3>
 <ul>
 <li>GET <code>/customers/{customerId}/</code></li>
 <li>PUT <code>/customers/{customerId}/</code></li>
 </ul>
-<h3 id="customer-object-example">Customer object example<a class="headerlink" href="#customer-object-example" title="Permanent link">&para;</a></h3>
+<h3 id="sample-customer-object">Sample customer object<a class="headerlink" href="#sample-customer-object" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;customerID&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;customerName&quot;</span><span class="p">,</span>
@@ -689,19 +719,19 @@
 <tr>
 <td align="left"></td>
 <td>shipping_city</td>
-<td align="left">The city of the address that you want your order shipped to.</td>
+<td align="left">The city that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
-<td align="left">The state of the address that you want your order shipped to.</td>
+<td align="left">The state that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
-<td align="left">The zip code of the address you your order shipped to.</td>
+<td align="left">The zip code you your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -731,19 +761,19 @@
 <tr>
 <td align="left"></td>
 <td>billing_city</td>
-<td align="left">The city of the address associated with the PayPal account, if different from the shipping address.</td>
+<td align="left">The city associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_state</td>
-<td align="left">The state of the address associated with the PayPal account, if different from the shipping address.</td>
+<td align="left">The state associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_zip</td>
-<td align="left">The zip code of the address associated with the PayPal account, if different from the shipping address.</td>
+<td align="left">The zip code associated with the PayPal account, if different from the shipping address.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
@@ -899,21 +929,21 @@
 <td align="left"></td>
 <td>shipping_city</td>
 <td align="left">Optional</td>
-<td align="left">The city of the address that you want your order shipped to.</td>
+<td align="left">The city that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_state</td>
 <td align="left">Optional</td>
-<td align="left">The state of the address that you want your order shipped to.</td>
+<td align="left">The state that you want your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>shipping_zip</td>
 <td align="left">Optional</td>
-<td align="left">The zip code of the address you your order shipped to.</td>
+<td align="left">The zip code you your order shipped to.</td>
 <td align="left">String</td>
 </tr>
 <tr>
@@ -948,21 +978,21 @@
 <td align="left"></td>
 <td>billing_city</td>
 <td align="left">Optional</td>
-<td align="left">The city of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
+<td align="left">The city associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_state</td>
 <td align="left">Optional</td>
-<td align="left">The state of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
+<td align="left">The state associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td>billing_zip</td>
 <td align="left">Optional</td>
-<td align="left">The zip code of the address associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
+<td align="left">The zip code associated with the PayPal account. Not required if the billing address is the same as the shipping address.</td>
 <td align="left">String</td>
 </tr>
 </tbody>
