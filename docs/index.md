@@ -10,4 +10,6 @@ Record Stack Overflow is the only API of its kind that focuses on vinyl records.
 - Locate rare vinyl records
 - Connect with people that share your enthusiasm for vinyl collecting
 
+## What's next?
+
 Now that you know more about Record Stack Overflow, continue to the [Getting Started](getting-started/authentication.md) section to create a [merchant account](getting-started/merchant-account.md) or create a [customer account](getting-started/customer-account.md).
