@@ -6,7 +6,7 @@ You must register your merchant account information before you can log in and re
 
 Send a cURL request in your terminal to register your Record Stack Overflow merchant account information.
 
-Use `http://www.recordstackoverflow.com/auth/register/customer` to register.
+Use `https://www.recordstackoverflow.com/auth/register/customer` to register.
 
 The following fields are **required** for merchant accounts:  
 - `companyName`  
@@ -27,7 +27,7 @@ The following fields are **required** for merchant accounts:
 
 ```curl
 curl -X POST \
-  http://www.recordstackoverflow.com/auth/register/merchant \
+  https://www.recordstackoverflow.com/auth/register/merchant \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'companyName=Company%20Name&primaryContact=Primary%20Contact&email=company%40email.com&phoneNumber=555-555-5555&password=password123&shipping_address1=321%20Shipping%20Lane&shipping_address2=&shipping_city=Raleigh&shipping_state=NC&shipping_zip=27615'
 ```
@@ -71,13 +71,13 @@ Below is an example of the parsed JSON response:
 
 Send a cURL request to receive your JSON web token (JWT) to authenticate your API calls. For more information on JWTs, see [Authentication](authentication.md)
 
-Send your registered email and password to `http://www.recordstackoverflow.com/auth/login/merchant` to get your access token.
+Send your registered email and password to `https://www.recordstackoverflow.com/auth/login/merchant` to get your access token.
 
 **Request example**
 
 ```shell
 curl -X POST \
-  http://www.recordstackoverflow.com/auth/login/merchant \
+  https://www.recordstackoverflow.com/auth/login/merchant \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'email=company%40email.com&password=password123&undefined='
 ```
