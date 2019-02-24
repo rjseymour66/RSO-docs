@@ -12,4 +12,4 @@ Record Stack Overflow is the only API that facilitates vinyl records sales. We c
 
 ## What's next?
 
-Now that you know more about Record Stack Overflow, continue to the [Getting Started](getting-started/authentication.md) section to get [authenticated](getting-started/authentication.md) so you can create a [merchant account](getting-started/merchant-account.md) or a [customer account](getting-started/customer-account.md).
+Now that you know more about Record Stack Overflow, continue to the [Getting Started](getting-started/authentication.md) so you can create a [merchant account](getting-started/merchant-account.md) or a [customer account](getting-started/customer-account.md).
