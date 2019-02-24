@@ -5,8 +5,7 @@ Store a representation of your company information in a merchant object. Contain
 
 ### Base path  
 
-
-https://<span></span>www.recordstackoverflow.com/api/v1/
+www.recordstackoverflow.com/api/v1/
 
 ### Merchants endpoints
 

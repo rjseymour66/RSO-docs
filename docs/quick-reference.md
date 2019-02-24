@@ -1,6 +1,6 @@
 ## Base path  
 
-https://<span></span>www.recordstackoverflow.com/api/v1/
+www.recordstackoverflow.com/api/v1/
 
 ## Records
 

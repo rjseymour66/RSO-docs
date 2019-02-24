@@ -5,7 +5,7 @@ Store a representation of your personal account information in a customer object
 
 ### Base path  
 
-https://<span></span>www.recordstackoverflow.com/api/v1/
+www.recordstackoverflow.com/api/v1/
 
 ### Customers endpoints
 

@@ -57,4 +57,3 @@ Part of the URL that enables you to filter the request response.
 
 **record**  
 A JSON object that contains product information for physical records.
-
