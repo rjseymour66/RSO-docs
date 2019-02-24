@@ -4,7 +4,7 @@ Store representations of each record item you sell in record objects. Contains i
 
 ### Base path  
 
-https://www.recordstackoverflow.com/api/v1/
+https://<span></span>www.recordstackoverflow.com/api/v1/
 
 ### Records endpoints
 
