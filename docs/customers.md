@@ -85,7 +85,7 @@ GET `/customer/{customerId}/`
 ### Sample request
 
 ```
-curl -X GET https://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 'Authorization: Bearer <access-token>'
+curl -X GET http://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 'Authorization: Bearer <access-token>'
 ```
 
 ###Sample response
@@ -165,7 +165,7 @@ PUT `/customers/{customerId}/`
 ###Sample request
 
 ```
-curl -X PUT https://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 'Authorization: Bearer <access-token>' -H 'Content-Type: application/json' -d username=NewUserName
+curl -X PUT http://www.recordstackoverflow.com/api/v1/customers/{customerID} -H 'Authorization: Bearer <access-token>' -H 'Content-Type: application/json' -d username=NewUserName
 ```
 
 ###Sample response

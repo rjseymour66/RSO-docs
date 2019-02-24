@@ -35,7 +35,7 @@ The following fields are optional for customer accounts:
 
 ```curl
 curl -X POST \
-  https://www.recordstackoverflow.com/auth/login/customer \
+  http://www.recordstackoverflow.com/auth/login/customer \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'username=customerName&firstName=First&lastName=Name&email=email%40example.com&password=password123&shipping_address1=123%20Shipping%20Lane&shipping_address2=Ste.%20%23100&shipping_city=Raleigh&shipping_state=NC&shipping_zip=27615&paypal_email=paypal%40example.com&billing_address1=123%20Billing%20Drive&billing_city=Boston&billing_state=MA&billing_zip=02101'
 ```
@@ -87,13 +87,13 @@ Below is an example of the parsed JSON response:
 
 Send a cURL request to receive your JSON web token (JWT) to authenticate your API calls. For more information on JWTs, see [Authentication](authentication.md)
 
-Send your registered email and password to `https://www.recordstackoverflow.com/auth/login/customer` to get your access token.
+Send your registered email and password to `http://www.recordstackoverflow.com/auth/login/customer` to get your access token.
 
 **Request example**
 
 ```shell
 curl -X POST \
-  https://www.recordstackoverflow.com/auth/login/customer \
+  http://www.recordstackoverflow.com/auth/login/customer \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'email=email%40example.com&password=password123&undefined='
 ```

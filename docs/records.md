@@ -69,7 +69,7 @@ POST `/records/`
 
 ```shell
 curl -X POST \
-  https://www.recordstackoverflow.com/api/v1/records \
+  http://www.recordstackoverflow.com/api/v1/records \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'artist=Artist%20Name&title=Title%20name&price=25.00&condition=g&comments=Comment%20example&undefined='
@@ -118,7 +118,7 @@ Retrieves all records. Filter results using the query parameters.
 
 ```
 curl -X GET \
-  https://www.recordstackoverflow.com/api/v1/records \
+  http://www.recordstackoverflow.com/api/v1/records \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```
@@ -200,7 +200,7 @@ Retrieves all records for sale for a specific merchant ID.
 
 ```
 curl -X GET \
-  https://www.recordstackoverflow.com/api/v1/records/merchants/{merchantId} \
+  http://www.recordstackoverflow.com/api/v1/records/merchants/{merchantId} \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```
@@ -274,7 +274,7 @@ Parameter | Description | Type | Required | Notes |
 
 ```
 curl -X PUT \
-  https://www.recordstackoverflow.com/api/v1/records/{recordId} \
+  http://www.recordstackoverflow.com/api/v1/records/{recordId} \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'comments=Price%20drop&price=9.00'
@@ -322,7 +322,7 @@ Deletes a record by ID. Delete only record objects that were created using your 
 
 ```
 curl -X DELETE \
-  https://www.recordstackoverflow.com/api/v1/records/{recordId}/merchants/{merchantId} \
+  http://www.recordstackoverflow.com/api/v1/records/{recordId}/merchants/{merchantId} \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```

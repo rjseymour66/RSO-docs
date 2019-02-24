@@ -131,7 +131,7 @@ PUT `/orders/merchants/{merchantId}/records/{recordId}/`
 
 ```
 curl -X POST \
-  https://www.recordstackoverflow.com/api/v1/orders/merchants/5c679751bb102c001706bf0a/records/5c679811bb102c001706bf0b \
+  http://www.recordstackoverflow.com/api/v1/orders/merchants/5c679751bb102c001706bf0a/records/5c679811bb102c001706bf0b \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'shipping_address1=123%20Shipping%20Lane&shipping_address2=&shipping_city=Raleigh&shipping_state=NC&shipping_zip=27615&paypal_email=paypal%40example.com&billing_address1=123%20Billing%20Drive&billing_address2=Ste.%20%23100&billing_city=Raleigh&billing_state=NC&billing_zip=27615&comments=This%20is%20a%20comment'
@@ -213,7 +213,7 @@ GET `/orders/customers/{customerId}/`
 
 ```
 curl -X GET \
-  https://www.recordstackoverflow.com/api/v1/orders/customers/5c6777d1d6a7470017de33c3 \
+  http://www.recordstackoverflow.com/api/v1/orders/customers/5c6777d1d6a7470017de33c3 \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'shipping_address1=123%20Shipping%20Lane&shipping_address2=&shipping_city=Raleigh&shipping_state=NC&shipping_zip=27615&paypal_email=paypal%40example.com&billing_address1=123%20Billing%20Drive&billing_address2=Ste.%20%23100&billing_city=Raleigh&billing_state=NC&billing_zip=27615&comments=This%20is%20a%20comment'
@@ -335,7 +335,7 @@ GET `/orders/merchants/{merchantId}/`
 
 ```
 curl -X GET \
-  https://www.recordstackoverflow.com/api/v1/orders/merchants/5c679751bb102c001706bf0a \
+  http://www.recordstackoverflow.com/api/v1/orders/merchants/5c679751bb102c001706bf0a \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```
@@ -466,7 +466,7 @@ PUT `/orders/{orderId}/`
 
 ```
 curl -X PUT \
-  https://www.recordstackoverflow.com/api/v1/orders/5c68a588fc924b00178bf143 \
+  http://www.recordstackoverflow.com/api/v1/orders/5c68a588fc924b00178bf143 \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'billing_info%5B0%5D%5Bbilling_address1%5D=789%20New%20Billing%20Ave&billing_info%5B0%5D%5Bbilling_address2%5D=Ste.%20%23950&billing_info%5B0%5D%5Bbilling_city%5D=Boston&billing_info%5B0%5D%5Bbilling_state%5D=MA&billing_info%5B0%5D%5Bbilling_zip%5D=02101&comments=Updated%20billing%20address'
@@ -540,7 +540,7 @@ DELETE `/orders/{orderId}/customers/{customerId}/`
 
 ```
 curl -X DELETE \
-  https://www.recordstackoverflow.com/api/v1/orders/5c68a588fc924b00178bf143/customers/5c6777d1d6a7470017de33c3 \
+  http://www.recordstackoverflow.com/api/v1/orders/5c68a588fc924b00178bf143/customers/5c6777d1d6a7470017de33c3 \
   -H 'Authorization: Bearer <access-token>' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
 ```

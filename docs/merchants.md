@@ -6,7 +6,7 @@ Store a representation of your company information in a merchant object. Contain
 ### Base path  
 
 
-https://www.recordstackoverflow.com/api/v1/
+https://<span></span>www.recordstackoverflow.com/api/v1/
 
 ### Merchants endpoints
 
@@ -73,7 +73,7 @@ Retrieves the information for a specific merchant ID.
 ###Sample request
 
 ```
-curl -X GET https://www.recordstackoverflow.com/api/v1/merchants/{merchantId} -H 'Authorization: Bearer <access-token>'
+curl -X GET http://www.recordstackoverflow.com/api/v1/merchants/{merchantId} -H 'Authorization: Bearer <access-token>'
 ```
 
 ### Sample response
@@ -134,7 +134,7 @@ PUT `/merchant/{merchantId}/`
 
 ```
 curl -X PUT \
-  https://www.recordstackoverflow.com/api/v1/merchants/{merchantID} \
+  http://www.recordstackoverflow.com/api/v1/merchants/{merchantID} \
   -H 'Authorization: Bearer <access-token>' \
   -d 'primaryContact=Updated%20Contact'
 ```
